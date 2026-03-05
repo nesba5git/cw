@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free mental health blog from Clear Water Wellness. Insights, evidence-based strategies, and practical tools to support emotional wellness.">
+  <title>Mental Health Blog | Clear Water Wellness LLC</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Additional styles for blog page -->
+  <style>
+    .blog-intro {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 60px;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+    .blog-intro__text {
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--color-text-light);
+    }
+    
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+    
+    .blog-card {
+      background: white;
+      border: 1px solid var(--color-border-light);
+      transition: var(--transition);
+    }
+    .blog-card:hover {
+      border-color: var(--color-text);
+    }
+    .blog-card__image {
+      aspect-ratio: 16/10;
+      background: linear-gradient(135deg, #e8e4df 0%, #d4cec6 100%);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+    .blog-card__content {
+      padding: 30px;
+    }
+    .blog-card__meta {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .blog-card__date {
+      font-size: 13px;
+      color: var(--color-text-muted);
+    }
+    .blog-card__tag {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: white;
+      background: var(--color-text);
+      padding: 4px 10px;
+    }
+    .blog-card__title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 400;
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+    .blog-card__title a {
+      transition: var(--transition);
+    }
+    .blog-card__title a:hover {
+      opacity: 0.7;
+    }
+    .blog-card__excerpt {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--color-text-light);
+      margin-bottom: 20px;
+    }
+    .blog-card__link {
+      font-size: 13px;
+      color: var(--color-text);
+      letter-spacing: 0.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+    .blog-card__link:hover {
+      gap: 12px;
+    }
+    
+    /* Featured post (first/largest) */
+    .blog-card--featured {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .blog-card--featured .blog-card__image {
+      aspect-ratio: auto;
+      min-height: 400px;
+    }
+    .blog-card--featured .blog-card__content {
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .blog-card--featured .blog-card__title {
+      font-size: 1.75rem;
+    }
+    
+    /* Category filter */
+    .blog-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .blog-filter {
+      padding: 10px 20px;
+      font-size: 13px;
+      border: 1px solid var(--color-border);
+      background: transparent;
+      color: var(--color-text-light);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .blog-filter:hover,
+    .blog-filter.active {
+      background: var(--color-text);
+      color: white;
+      border-color: var(--color-text);
+    }
+    
+    @media (max-width: 900px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+      .blog-card--featured {
+        grid-column: span 1;
+        grid-template-columns: 1fr;
+      }
+      .blog-card--featured .blog-card__image {
+        min-height: 250px;
+      }
+      .blog-card--featured .blog-card__content {
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="logo">Clear Water <span>Wellness</span></a>
+        
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="services.html" class="nav__link">Services</a></li>
+            <li><a href="what-to-expect.html" class="nav__link">What to Expect</a></li>
+            <li><a href="team.html" class="nav__link">The Team</a></li>
+            <li><a href="support-groups.html" class="nav__link">Support Groups</a></li>
+            <li><a href="rates-insurance.html" class="nav__link">Rates & Insurance</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+          <a href="contact.html" class="nav__cta">Request Appointment</a>
+        </nav>
+        
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <span class="page-header__tag">Free Resources</span>
+      <h1 class="page-header__title">Mental Health Blog</h1>
+      <p class="page-header__text">Clinical ideas, real talk.</p>
+    </div>
+  </section>
+
+  <!-- Blog Intro -->
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="blog-intro">
+        <p class="blog-intro__text">Welcome to the Free Mental Health Blog from Clear Water Wellness. Here we share insights, evidence-based strategies, and practical tools to support emotional wellness for individuals, families, athletes, and professionals. Written by licensed clinicians dedicated to helping our Berks County community and beyond thrive.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Filters -->
+  <section class="section" style="padding-top: 40px; padding-bottom: 0;">
+    <div class="container">
+      <div class="blog-filters">
+        <button class="blog-filter active">All Posts</button>
+        <button class="blog-filter">Therapy</button>
+        <button class="blog-filter">Relationships</button>
+        <button class="blog-filter">Parenting</button>
+        <button class="blog-filter">Anxiety & Trauma</button>
+        <button class="blog-filter">Self-Care</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid">
+        
+        <!-- Featured Post -->
+        <article class="blog-card blog-card--featured">
+          <div class="blog-card__image">🌸</div>
+          <div class="blog-card__content">
+            <div class="blog-card__meta">
+              <span class="blog-card__tag">Starting Therapy</span>
+              <span class="blog-card__date">March 1, 2026</span>
+            </div>
+            <h2 class="blog-card__title">
+              <a href="#">Thinking of Starting Therapy? Signs, Tips, and Readiness</a>
+            </h2>
+            <p class="blog-card__excerpt">Not sure if you're ready for therapy? Learn the common signs it might be time, what to expect in your first sessions, and how to know when you're ready to take that first step toward healing.</p>
+            <a href="#" class="blog-card__link">
+              Read article <span>→</span>
+            </a>
+          </div>
+        </article>
+        
+        <!-- Post 2 -->
+        <article class="blog-card">
+          <div class="blog-card__image">🎓</div>
+          <div class="blog-card__content">
+            <div class="blog-card__meta">
+              <span class="blog-card__tag">Therapy</span>
+              <span class="blog-card__date">February 22, 2026</span>
+            </div>
+            <h2 class="blog-card__title">
+              <a href="#">Why Working With Interns Can Be a Positive Experience for Clients</a>
+            </h2>
+            <p class="blog-card__excerpt">Working with a master's-level therapy intern isn't "less than"—it can actually enhance your experience. Interns bring extra attention, energy, and dedication, providing personalized, client-focused care while using the latest evidence-based approaches.</p>
+            <a href="#" class="blog-card__link">
+              Read article <span>→</span>
+            </a>
+          </div>
+        </article>
+        
+        <!-- Post 3 -->
+        <article class="blog-card">
+          <div class="blog-card__image">💕</div>
+          <div class="blog-card__content">
+            <div class="blog-card__meta">
+              <span class="blog-card__tag">Relationships</span>
+              <span class="blog-card__date">February 15, 2026</span>
+            </div>
+            <h2 class="blog-card__title">
+              <a href="#">Couples Counseling Isn't Just for Monogamous Relationships</a>
+            </h2>
+            <p class="blog-card__excerpt">Couples counseling isn't just for monogamy. Learn how poly-affirming therapy supports communication, consent, and connection in non-monogamous relationships.</p>
+            <a href="#" class="blog-card__link">
+              Read article <span>→</span>
+            </a>
+          </div>
+        </article>
+        
+        <!-- Post 4 -->
+        <article class="blog-card">
+          <div class="blog-card__image">💝</div>
+          <div class="blog-card__content">
+            <div class="blog-card__meta">
+              <span class="blog-card__tag">Parenting</span>
+              <span class="blog-card__date">February 10, 2026</span>
+            </div>
+            <h2 class="blog-card__title">
+              <a href="#">Hearts Under Pressure: Helping Kids Survive Valentine's Day Social Stress</a>
+            </h2>
+            <p class="blog-card__excerpt">Valentine's Day can amplify social pressure for children, turning friendship into a visible measure of belonging. This article explains why Valentine's Day can feel emotionally loaded and how parents can respond.</p>
+            <a href="#" class="blog-card__link">
+              Read article <span>→</span>
+            </a>
+          </div>
+        </article>
+        
+        <!-- Post 5 -->
+        <article class="blog-card">
+          <div class="blog-card__image">🌱</div>
+          <div class="blog-card__content">
+            <div class="blog-card__meta">
+              <span class="blog-card__tag">Parenting</span>
+              <span class="blog-card__date">February 10, 2026</span>
+            </div>
+            <h2 class="blog-card__title">
+              <a href="#">Building Resilience in Kids: How Everyday Moments Build Emotional Strength</a>
+            </h2>
+            <p class="blog-card__excerpt">Resilience isn't built by shielding children from discomfort. It's developed through manageable challenges, guided support, and everyday opportunities to practice coping.</p>
+            <a href="#" class="blog-card__link">
+              Read article <span>→</span>
+            </a>
+          </div>
+        </article>
+        
+        <!-- Post 6 -->
+        <article class="blog-card">
+          <div class="blog-card__image">💑</div>
+          <div class="blog-card__content">
+            <div class="blog-card__meta">
+              <span class="blog-card__tag">Relationships</span>
+              <span class="blog-card__date">February 8, 2026</span>
+            </div>
+            <h2 class="blog-card__title">
+              <a href="#">Signs Your Relationship Could Benefit from Couples Counseling</a>
+            </h2>
+            <p class="blog-card__excerpt">Feeling stuck in the same fights or drifting apart? Couples counseling can help you break unhealthy patterns, rebuild trust, and strengthen connection—long before problems feel irreversible.</p>
+            <a href="#" class="blog-card__link">
+              Read article <span>→</span>
+            </a>
+          </div>
+        </article>
+        
+        <!-- Post 7 -->
+        <article class="blog-card">
+          <div class="blog-card__image">🔗</div>
+          <div class="blog-card__content">
+            <div class="blog-card__meta">
+              <span class="blog-card__tag">Mental Health</span>
+              <span class="blog-card__date">February 1, 2026</span>
+            </div>
+            <h2 class="blog-card__title">
+              <a href="#">Understanding Attachment Styles: How Early Bonds Shape Our Relationships</a>
+            </h2>
+            <p class="blog-card__excerpt">Attachment styles shape how we relate to others, influencing intimacy, trust, and emotional regulation. This post explains secure, anxious, avoidant, and disorganized attachment.</p>
+            <a href="#" class="blog-card__link">
+              Read article <span>→</span>
+            </a>
+          </div>
+        </article>
+        
+        <!-- Post 8 -->
+        <article class="blog-card">
+          <div class="blog-card__image">🩹</div>
+          <div class="blog-card__content">
+            <div class="blog-card__meta">
+              <span class="blog-card__tag">Trauma</span>
+              <span class="blog-card__date">January 21, 2026</span>
+            </div>
+            <h2 class="blog-card__title">
+              <a href="#">Understanding Trauma and Trauma-Informed Care</a>
+            </h2>
+            <p class="blog-card__excerpt">Trauma is defined less by what happened and more by how the experience was processed internally. Whether we felt powerless, unsafe, unseen, or unsupported can matter for how we were affected.</p>
+            <a href="#" class="blog-card__link">
+              Read article <span>→</span>
+            </a>
+          </div>
+        </article>
+        
+        <!-- Post 9 -->
+        <article class="blog-card">
+          <div class="blog-card__image">🪑</div>
+          <div class="blog-card__content">
+            <div class="blog-card__meta">
+              <span class="blog-card__tag">Therapy</span>
+              <span class="blog-card__date">January 21, 2026</span>
+            </div>
+            <h2 class="blog-card__title">
+              <a href="#">From the Therapist's Chair: What We're Actually Thinking While You're in Therapy</a>
+            </h2>
+            <p class="blog-card__excerpt">Ever wonder what your therapist notices in session? Learn why therapy isn't all breakthroughs, why insight isn't the whole story, and why small wins matter more than you think.</p>
+            <a href="#" class="blog-card__link">
+              Read article <span>→</span>
+            </a>
+          </div>
+        </article>
+        
+        <!-- Post 10 -->
+        <article class="blog-card">
+          <div class="blog-card__image">📋</div>
+          <div class="blog-card__content">
+            <div class="blog-card__meta">
+              <span class="blog-card__tag">Starting Therapy</span>
+              <span class="blog-card__date">January 21, 2026</span>
+            </div>
+            <h2 class="blog-card__title">
+              <a href="#">Setting Realistic Expectations in Therapy: What to Know Before You Start!</a>
+            </h2>
+            <p class="blog-card__excerpt">Starting therapy? Here's what to realistically expect from the process, how long it takes, and what success actually looks like beyond the "aha moments."</p>
+            <a href="#" class="blog-card__link">
+              Read article <span>→</span>
+            </a>
+          </div>
+        </article>
+        
+      </div>
+      
+      <!-- Load More -->
+      <div style="text-align: center; margin-top: 60px;">
+        <button class="btn" style="background: var(--color-text); color: white; border: none;">Load More Posts</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="section" style="background: white;">
+    <div class="container">
+      <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+        <span class="intro__tag">Stay Connected</span>
+        <h2 class="intro__title" style="margin-bottom: 20px;">Follow us on social</h2>
+        <p class="intro__text" style="margin-bottom: 30px;">Get mental health tips, updates, and behind-the-scenes content from the Clear Water Wellness team.</p>
+        <div style="display: flex; gap: 15px; justify-content: center;">
+          <a href="https://www.instagram.com/clearwaterwellness/" target="_blank" class="btn" style="background: var(--color-text); color: white;">Follow on Instagram</a>
+          <a href="https://www.facebook.com/clearwaterwellnessllc" target="_blank" class="btn" style="background: transparent; color: var(--color-text); border: 1px solid var(--color-border);">Follow on Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta section--sm">
+    <div class="container">
+      <div class="cta__inner">
+        <div class="cta__content">
+          <h2 class="cta__title">Ready to start your journey?</h2>
+          <p class="cta__text">Our team is here to help you take the next step.</p>
+        </div>
+        <div class="cta__buttons">
+          <a href="contact.html" class="btn btn--primary">Request Appointment</a>
+          <a href="tel:6107509096" class="btn btn--outline">Call (610) 750-9096</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__logo">Clear Water Wellness</div>
+          <p class="footer__desc">Making therapy less awkward since 2017. A warm, friendly environment with therapists committed to your healing and growth.</p>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/clearwaterwellness/" target="_blank" aria-label="Instagram">IG</a>
+            <a href="https://www.facebook.com/clearwaterwellnessllc" target="_blank" aria-label="Facebook">FB</a>
+          </div>
+        </div>
+        
+        <div class="footer__col">
+          <h4>Get Started</h4>
+          <ul class="footer__links">
+            <li><a href="services.html">Services We Offer</a></li>
+            <li><a href="what-to-expect.html">What to Expect</a></li>
+            <li><a href="contact.html">Request Appointment</a></li>
+            <li><a href="#">Client Portal</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__col">
+          <h4>Resources</h4>
+          <ul class="footer__links">
+            <li><a href="team.html">The Team</a></li>
+            <li><a href="support-groups.html">Support Groups</a></li>
+            <li><a href="rates-insurance.html">Rates & Insurance</a></li>
+            <li><a href="blog.html">Mental Health Blog</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul class="footer__links">
+            <li><a href="tel:6107509096">(610) 750-9096</a></li>
+            <li><a href="mailto:info@cwwellness.com">info@cwwellness.com</a></li>
+            <li>4 Park Plaza</li>
+            <li>Wyomissing, PA 19610</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2024 Clear Water Wellness LLC. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Simple filter functionality (visual only - would need backend for real filtering)
+    document.querySelectorAll('.blog-filter').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.blog-filter').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
