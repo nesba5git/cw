@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clear Water Wellness rates and insurance information. We are an out-of-network provider - learn about session rates and how to maximize your insurance benefits.">
+  <title>Rates & Insurance | Clear Water Wellness LLC</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Additional styles for this page -->
+  <style>
+    .rate-card {
+      background: white;
+      border: 1px solid var(--color-border-light);
+      padding: 40px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .rate-card:hover {
+      border-color: var(--color-text);
+    }
+    .rate-card__title {
+      font-family: var(--font-primary);
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+    .rate-card__price {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      color: var(--color-text);
+      margin-bottom: 5px;
+    }
+    .rate-card__duration {
+      font-size: 14px;
+      color: var(--color-text-muted);
+      margin-bottom: 20px;
+    }
+    .rate-card__description {
+      font-size: 15px;
+      color: var(--color-text-light);
+      line-height: 1.7;
+    }
+    .rate-card--featured {
+      border-color: var(--color-text);
+      position: relative;
+    }
+    .rate-card--featured::before {
+      content: 'Most Common';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-text);
+      color: white;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 15px;
+    }
+    
+    .benefits-widget {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border: 2px dashed var(--color-border);
+      padding: 60px 40px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .benefits-widget__title {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      margin-bottom: 15px;
+    }
+    .benefits-widget__text {
+      font-size: 16px;
+      color: var(--color-text-light);
+      max-width: 500px;
+      margin: 0 auto 20px;
+    }
+    .benefits-widget__placeholder {
+      background: white;
+      border: 1px solid var(--color-border);
+      padding: 40px;
+      margin-top: 30px;
+      font-size: 14px;
+      color: var(--color-text-muted);
+    }
+    
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: var(--color-text);
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    
+    .question-list {
+      background: white;
+      border: 1px solid var(--color-border-light);
+      padding: 30px;
+    }
+    .question-list__item {
+      padding: 15px 0;
+      border-bottom: 1px solid var(--color-border-light);
+      font-size: 15px;
+      color: var(--color-text-light);
+    }
+    .question-list__item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .question-list__item strong {
+      color: var(--color-text);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="logo">Clear Water <span>Wellness</span></a>
+        
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="services.html" class="nav__link">Services</a></li>
+            <li><a href="what-to-expect.html" class="nav__link">What to Expect</a></li>
+            <li><a href="team.html" class="nav__link">The Team</a></li>
+            <li><a href="support-groups.html" class="nav__link">Support Groups</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+          <a href="contact.html" class="nav__cta">Request Appointment</a>
+        </nav>
+        
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <span class="page-header__tag">Investment in You</span>
+      <h1 class="page-header__title">Rates & Insurance</h1>
+      <p class="page-header__text">Transparent pricing and options to help make therapy accessible.</p>
+    </div>
+  </section>
+
+  <!-- Quick Summary -->
+  <section class="intro section">
+    <div class="container">
+      <div class="intro__inner">
+        <div class="intro__content">
+          <span class="intro__tag">The Short Version</span>
+          <h2 class="intro__title">We're out-of-network<br>(and here's why)</h2>
+          <p class="intro__text">Clear Water Wellness is an out-of-network provider, meaning we are not contracted with insurance companies. Payment is due at the time of service.</p>
+          <p class="intro__text"><strong>But here's the good news:</strong> If you have out-of-network benefits, you may be able to get 40-80% of your session cost reimbursed by your insurance company. We'll help you figure that out.</p>
+        </div>
+        <div class="intro__stats">
+          <div class="stat">
+            <div class="stat__number">40-80%</div>
+            <div class="stat__label">Potential Reimbursement</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number">Easy</div>
+            <div class="stat__label">Superbill Provided</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number">Free</div>
+            <div class="stat__label">Benefits Check</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Session Rates -->
+  <section class="section" style="background: white;">
+    <div class="container">
+      <div class="services__header">
+        <span class="services__tag">Session Rates</span>
+        <h2 class="services__title">Our Fees</h2>
+        <p style="color: var(--color-text-light); margin-top: 10px;">Payment is due at time of service. We accept credit cards, debit cards, and HSA/FSA cards.</p>
+      </div>
+      
+      <div class="services__grid">
+        <div class="rate-card">
+          <h3 class="rate-card__title">Initial Assessment</h3>
+          <div class="rate-card__price">$XXX</div>
+          <div class="rate-card__duration">60 minutes</div>
+          <p class="rate-card__description">Your first session where we get to know each other and discuss your goals for therapy.</p>
+        </div>
+        
+        <div class="rate-card rate-card--featured">
+          <h3 class="rate-card__title">Individual Session</h3>
+          <div class="rate-card__price">$XXX</div>
+          <div class="rate-card__duration">50 minutes</div>
+          <p class="rate-card__description">Standard individual therapy session with your therapist.</p>
+        </div>
+        
+        <div class="rate-card">
+          <h3 class="rate-card__title">Extended Session</h3>
+          <div class="rate-card__price">$XXX</div>
+          <div class="rate-card__duration">80 minutes</div>
+          <p class="rate-card__description">Longer sessions for couples, families, or when more time is needed.</p>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 40px; padding: 30px; background: #f9f9f9; border: 1px solid #eee;">
+        <p style="font-size: 16px; color: #666; margin-bottom: 10px;"><strong>Clinical Intern Sessions Available at Reduced Rates</strong></p>
+        <p style="font-size: 15px; color: #999;">Working with a supervised clinical intern can be a great option for quality care at a lower cost.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Check Your Benefits - Mentaya Section -->
+  <section class="section">
+    <div class="container">
+      <div class="services__header">
+        <span class="services__tag">Save Money on Therapy</span>
+        <h2 class="services__title">Check Your Out-of-Network Benefits</h2>
+        <p style="color: var(--color-text-light); margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">Many insurance plans cover out-of-network therapy. Use the calculator below to instantly check your potential reimbursement.</p>
+      </div>
+      
+      <div class="benefits-widget">
+        <h3 class="benefits-widget__title">✨ Instant Benefits Calculator</h3>
+        <p class="benefits-widget__text">Enter your insurance information to see how much you could get reimbursed for each therapy session.</p>
+        
+        <div class="benefits-widget__placeholder">
+          <!-- ============================================= -->
+          <!-- MENTAYA WIDGET PLACEHOLDER                    -->
+          <!-- ============================================= -->
+          <!-- To add the Mentaya Benefits Calculator:       -->
+          <!-- 1. Sign up at mentaya.com/therapists          -->
+          <!-- 2. Go to your dashboard                       -->
+          <!-- 3. Get your embed code                        -->
+          <!-- 4. Replace this placeholder with embed code   -->
+          <!-- ============================================= -->
+          <p style="margin-bottom: 15px;">🔧 <strong>Mentaya Benefits Calculator Widget</strong></p>
+          <p>Paste your Mentaya embed code here to let clients instantly check their out-of-network benefits.</p>
+          <p style="margin-top: 15px; font-size: 13px;"><a href="https://www.mentaya.com/therapists" target="_blank" style="color: #666; text-decoration: underline;">Get your embed code from Mentaya →</a></p>
+        </div>
+        
+        <p style="font-size: 13px; color: #999; margin-top: 20px;">Powered by Mentaya — helping clients get reimbursed for out-of-network therapy</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Out-of-Network -->
+  <section class="approach section" style="background: white;">
+    <div class="container">
+      <div class="approach__inner">
+        <div class="approach__content">
+          <span class="approach__tag">Our Philosophy</span>
+          <h2 class="approach__title">Why we're<br>out-of-network</h2>
+          <p class="approach__text">We strive to provide the best individualized treatment plan for each client. Being out-of-network allows us to do that without insurance companies dictating your care.</p>
+          <p class="approach__text">When therapists are in-network, insurance companies may:</p>
+          
+          <div class="approach__list">
+            <div class="approach__item">
+              <span class="approach__item-number">→</span>
+              <div class="approach__item-content">
+                <h4>Require a Diagnosis</h4>
+                <p>Insurance may require us to give you a diagnosis and justify that it's "severe enough" to warrant treatment.</p>
+              </div>
+            </div>
+            <div class="approach__item">
+              <span class="approach__item-number">→</span>
+              <div class="approach__item-content">
+                <h4>Limit Your Sessions</h4>
+                <p>Some insurance companies dictate how many sessions you're "allowed" to attend based on their criteria.</p>
+              </div>
+            </div>
+            <div class="approach__item">
+              <span class="approach__item-number">→</span>
+              <div class="approach__item-content">
+                <h4>Access Your Information</h4>
+                <p>Insurance companies may require access to personal information and session notes.</p>
+              </div>
+            </div>
+          </div>
+          
+          <p class="approach__text" style="margin-top: 30px;"><strong>By staying out-of-network, your therapy stays between you and your therapist.</strong></p>
+        </div>
+        <div class="approach__image"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Reimbursement Works -->
+  <section class="section">
+    <div class="container">
+      <div class="services__header">
+        <span class="services__tag">Getting Reimbursed</span>
+        <h2 class="services__title">How It Works</h2>
+      </div>
+      
+      <div class="approach__inner" style="gap: 60px;">
+        <div style="flex: 1;">
+          <div class="approach__list">
+            <div class="approach__item" style="margin-bottom: 30px;">
+              <span class="step-number">1</span>
+              <div class="approach__item-content">
+                <h4>Check Your Benefits</h4>
+                <p>Use the calculator above or call your insurance to ask about out-of-network mental health coverage.</p>
+              </div>
+            </div>
+            <div class="approach__item" style="margin-bottom: 30px;">
+              <span class="step-number">2</span>
+              <div class="approach__item-content">
+                <h4>Pay at Time of Service</h4>
+                <p>You pay our standard rate at each session. We accept cards, including HSA/FSA.</p>
+              </div>
+            </div>
+            <div class="approach__item" style="margin-bottom: 30px;">
+              <span class="step-number">3</span>
+              <div class="approach__item-content">
+                <h4>Receive Your Superbill</h4>
+                <p>We provide you with a superbill (itemized receipt) that includes all the info your insurance needs.</p>
+              </div>
+            </div>
+            <div class="approach__item">
+              <span class="step-number">4</span>
+              <div class="approach__item-content">
+                <h4>Get Reimbursed</h4>
+                <p>Submit the superbill to your insurance and they reimburse you directly—often 40-80% of the session cost!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div style="flex: 1;">
+          <div class="question-list">
+            <h4 style="margin-bottom: 20px; font-family: var(--font-display); font-size: 1.25rem;">Questions to Ask Your Insurance</h4>
+            <div class="question-list__item">
+              <strong>"Do I have out-of-network benefits for mental health services?"</strong>
+            </div>
+            <div class="question-list__item">
+              <strong>"What is my out-of-network deductible?"</strong> (The amount you pay before insurance kicks in)
+            </div>
+            <div class="question-list__item">
+              <strong>"What percentage do you reimburse for out-of-network mental health?"</strong>
+            </div>
+            <div class="question-list__item">
+              <strong>"Is there a limit on the number of sessions covered per year?"</strong>
+            </div>
+            <div class="question-list__item">
+              <strong>"How do I submit a claim for reimbursement?"</strong>
+            </div>
+          </div>
+          <p style="font-size: 14px; color: #999; margin-top: 20px; text-align: center;">
+            <a href="#" style="color: #666; text-decoration: underline;">Download our full guide to out-of-network benefits →</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Good Faith Estimate -->
+  <section class="section" style="background: white;">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <span class="intro__tag" style="display: block; text-align: center;">Your Rights</span>
+        <h2 class="intro__title" style="text-align: center; margin-bottom: 30px;">Good Faith Estimate</h2>
+        <p class="intro__text" style="text-align: center;">Under the No Surprises Act, you have the right to receive a "Good Faith Estimate" explaining how much your medical care will cost. This estimate includes the expected cost of any items or services that are reasonably expected to be provided together.</p>
+        <p class="intro__text" style="text-align: center;">If you receive a bill that is at least $400 more than your Good Faith Estimate, you can dispute the bill. For questions or more information about your right to a Good Faith Estimate, contact us or visit <a href="https://www.cms.gov/nosurprises" target="_blank" style="color: #666;">cms.gov/nosurprises</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Investment Quote -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+        <p style="font-size: 22px; font-style: italic; line-height: 1.8; color: #666; margin-bottom: 20px;">
+          "Everyone has mental health—therefore, therapy isn't only for people with severe mental illnesses. It is for anyone who wants to change their life for the better, and that in itself is not a waste of time or money."
+        </p>
+        <p style="color: #999; font-size: 14px;">— Clear Water Wellness</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta section--sm">
+    <div class="container">
+      <div class="cta__inner">
+        <div class="cta__content">
+          <h2 class="cta__title">Questions about cost?</h2>
+          <p class="cta__text">We're happy to discuss rates, payment options, and help you understand your benefits.</p>
+        </div>
+        <div class="cta__buttons">
+          <a href="contact.html" class="btn btn--primary">Contact Us</a>
+          <a href="tel:6107509096" class="btn btn--outline">Call (610) 750-9096</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__logo">Clear Water Wellness</div>
+          <p class="footer__desc">Making therapy less awkward since 2017. A warm, friendly environment with therapists committed to your healing and growth.</p>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/clearwaterwellness/" target="_blank" aria-label="Instagram">IG</a>
+            <a href="https://www.facebook.com/clearwaterwellnessllc" target="_blank" aria-label="Facebook">FB</a>
+          </div>
+        </div>
+        
+        <div class="footer__col">
+          <h4>Get Started</h4>
+          <ul class="footer__links">
+            <li><a href="services.html">Services We Offer</a></li>
+            <li><a href="what-to-expect.html">What to Expect</a></li>
+            <li><a href="contact.html">Request Appointment</a></li>
+            <li><a href="#">Client Portal</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__col">
+          <h4>Resources</h4>
+          <ul class="footer__links">
+            <li><a href="team.html">The Team</a></li>
+            <li><a href="support-groups.html">Support Groups</a></li>
+            <li><a href="rates-insurance.html">Rates & Insurance</a></li>
+            <li><a href="#">Mental Health Blogs</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul class="footer__links">
+            <li><a href="tel:6107509096">(610) 750-9096</a></li>
+            <li><a href="mailto:info@cwwellness.com">info@cwwellness.com</a></li>
+            <li>4 Park Plaza</li>
+            <li>Wyomissing, PA 19610</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2024 Clear Water Wellness LLC. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
