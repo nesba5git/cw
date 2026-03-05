@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Clearwater Wellness - schedule a session, ask questions, or learn more about our services.">
+  <title>Contact Us | Clearwater Wellness</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="logo">Clearwater</a>
+        
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="services.html" class="nav__link">Services</a></li>
+            <li><a href="about.html" class="nav__link">About</a></li>
+            <li><a href="team.html" class="nav__link">Team</a></li>
+            <li><a href="contact.html" class="nav__link nav__link--active">Contact</a></li>
+          </ul>
+          <a href="contact.html" class="nav__cta">Book Session</a>
+        </nav>
+        
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <span class="page-header__tag">Get in Touch</span>
+      <h1 class="page-header__title">Contact Us</h1>
+      <p class="page-header__text">Ready to begin? Have questions? We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" style="background: white;">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2 class="contact-info__title">Let's connect</h2>
+          <p class="contact-info__text">Taking the first step can feel daunting. We're here to make it as easy as possible. Reach out however feels most comfortable for you.</p>
+          
+          <div class="contact-info__item">
+            <div class="contact-info__icon">📍</div>
+            <div class="contact-info__content">
+              <h4>Visit Us</h4>
+              <p>4 Park Plaza<br>Wyomissing, PA 19610</p>
+            </div>
+          </div>
+          
+          <div class="contact-info__item">
+            <div class="contact-info__icon">📞</div>
+            <div class="contact-info__content">
+              <h4>Call Us</h4>
+              <p>(610) 750-9096</p>
+            </div>
+          </div>
+          
+          <div class="contact-info__item">
+            <div class="contact-info__icon">✉️</div>
+            <div class="contact-info__content">
+              <h4>Email Us</h4>
+              <p>hello@clearwater.com</p>
+            </div>
+          </div>
+          
+          <div class="contact-info__item">
+            <div class="contact-info__icon">🕐</div>
+            <div class="contact-info__content">
+              <h4>Hours</h4>
+              <p>Monday – Friday: 9am – 7pm<br>Saturday: 9am – 2pm<br>Sunday: Closed</p>
+            </div>
+          </div>
+        </div>
+        
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          
+          <div class="form-group">
+            <label for="service">I'm Interested In</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option value="individual">Individual Therapy</option>
+              <option value="couples">Couples Counseling</option>
+              <option value="family">Family Therapy</option>
+              <option value="group">Group Sessions</option>
+              <option value="grief">Grief Support</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">How Can We Help? *</label>
+            <textarea id="message" name="message" placeholder="Tell us a little about what brings you here..." required></textarea>
+          </div>
+          
+          <button type="submit" class="form-submit">Send Message</button>
+          
+          <p style="font-size: 13px; color: #999; margin-top: 15px; text-align: center;">
+            Your information is confidential and secure.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Preview -->
+  <section class="services section">
+    <div class="container">
+      <div class="services__header">
+        <span class="services__tag">Common Questions</span>
+        <h2 class="services__title">FAQ</h2>
+      </div>
+      
+      <div class="services__grid">
+        <div class="service-card">
+          <h3 class="service-card__title">Do you accept insurance?</h3>
+          <p class="service-card__text">Yes, we accept most major insurance plans. Contact us with your insurance information and we'll verify your coverage.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3 class="service-card__title">How long are sessions?</h3>
+          <p class="service-card__text">Individual sessions are typically 50 minutes. Couples and family sessions may be 60-90 minutes depending on needs.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3 class="service-card__title">What if I need to cancel?</h3>
+          <p class="service-card__text">We ask for 24 hours notice for cancellations. Life happens—just let us know as soon as you can.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3 class="service-card__title">Is everything confidential?</h3>
+          <p class="service-card__text">Absolutely. Everything shared in therapy is confidential, with very limited legal exceptions we'll explain upfront.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3 class="service-card__title">How do I know which therapist to choose?</h3>
+          <p class="service-card__text">We'll help match you! During your initial call, we'll learn about your needs and recommend the best fit.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3 class="service-card__title">Do you offer virtual sessions?</h3>
+          <p class="service-card__text">Yes, we offer secure video sessions for those who prefer the convenience of therapy from home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta section--sm">
+    <div class="container">
+      <div class="cta__inner">
+        <div class="cta__content">
+          <h2 class="cta__title">Prefer to talk?</h2>
+          <p class="cta__text">Sometimes it's easier to just pick up the phone. We're happy to chat.</p>
+        </div>
+        <div class="cta__buttons">
+          <a href="tel:6107509096" class="btn btn--primary">Call (610) 750-9096</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__logo">Clearwater</div>
+          <p class="footer__desc">A thoughtfully designed space for growth. Professional guidance meets genuine human connection.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">in</a>
+            <a href="#" aria-label="LinkedIn">li</a>
+          </div>
+        </div>
+        
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html">Individual Therapy</a></li>
+            <li><a href="services.html">Couples Counseling</a></li>
+            <li><a href="services.html">Family Therapy</a></li>
+            <li><a href="services.html">Group Sessions</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul class="footer__links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul class="footer__links">
+            <li><a href="contact.html">Get in Touch</a></li>
+            <li><a href="tel:6107509096">(610) 750-9096</a></li>
+            <li><a href="mailto:hello@clearwater.com">hello@clearwater.com</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Clearwater Wellness. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
