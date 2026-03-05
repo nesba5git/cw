@@ -125,6 +125,196 @@
     .question-list__item strong {
       color: var(--color-text);
     }
+    
+    /* Story Teaser Callout */
+    .story-teaser {
+      background: #fffbeb;
+      border: 1px solid #fcd34d;
+      border-left: 4px solid #f59e0b;
+      padding: 30px 35px;
+      margin: 40px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .story-teaser__content {
+      flex: 1;
+      min-width: 280px;
+    }
+    .story-teaser__icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .story-teaser__title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+      color: #92400e;
+    }
+    .story-teaser__text {
+      font-size: 15px;
+      color: #a16207;
+      line-height: 1.6;
+    }
+    .story-teaser__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1a1a1a;
+      color: white;
+      padding: 14px 28px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      border: none;
+      white-space: nowrap;
+    }
+    .story-teaser__btn:hover {
+      background: #333;
+    }
+    
+    /* Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s ease;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal {
+      background: white;
+      max-width: 680px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      position: relative;
+      transform: translateY(20px);
+      transition: 0.3s ease;
+    }
+    .modal-overlay.active .modal {
+      transform: translateY(0);
+    }
+    .modal__header {
+      background: #1a1a1a;
+      color: white;
+      padding: 30px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    .modal__tag {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 8px;
+    }
+    .modal__title {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 400;
+    }
+    .modal__close {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s ease;
+    }
+    .modal__close:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    .modal__body {
+      padding: 40px;
+    }
+    .modal__body h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin: 30px 0 15px;
+      color: #1a1a1a;
+    }
+    .modal__body h4:first-child {
+      margin-top: 0;
+    }
+    .modal__body p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    .modal__body .highlight {
+      background: #fef3c7;
+      padding: 2px 6px;
+      font-weight: 500;
+      color: #92400e;
+    }
+    .modal__body .scenario-box {
+      background: #f9fafb;
+      border-left: 3px solid #1a1a1a;
+      padding: 20px 25px;
+      margin: 20px 0;
+    }
+    .modal__body .scenario-box p {
+      margin-bottom: 10px;
+    }
+    .modal__body .scenario-box p:last-child {
+      margin-bottom: 0;
+    }
+    .modal__body ul {
+      margin: 15px 0;
+      padding-left: 0;
+    }
+    .modal__body li {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+    }
+    .modal__body li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #1a1a1a;
+    }
+    .modal__body .takeaway {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      padding: 25px;
+      margin-top: 25px;
+    }
+    .modal__body .takeaway p {
+      color: #065f46;
+      margin: 0;
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
@@ -140,6 +330,7 @@
             <li><a href="what-to-expect.html" class="nav__link">What to Expect</a></li>
             <li><a href="team.html" class="nav__link">The Team</a></li>
             <li><a href="support-groups.html" class="nav__link">Support Groups</a></li>
+            <li><a href="rates-insurance.html" class="nav__link nav__link--active">Rates & Insurance</a></li>
             <li><a href="contact.html" class="nav__link">Contact</a></li>
           </ul>
           <a href="contact.html" class="nav__cta">Request Appointment</a>
@@ -300,6 +491,18 @@
           <p class="approach__text" style="margin-top: 30px;"><strong>By staying out-of-network, your therapy stays between you and your therapist.</strong></p>
         </div>
         <div class="approach__image"></div>
+      </div>
+      
+      <!-- Emily's Story Teaser -->
+      <div class="story-teaser">
+        <div class="story-teaser__content">
+          <div class="story-teaser__icon">💡</div>
+          <h3 class="story-teaser__title">"But wait—doesn't in-network mean I pay less?"</h3>
+          <p class="story-teaser__text">Not always. Many people are surprised to learn that being "in-network" doesn't guarantee lower costs. Read Emily's story to understand why.</p>
+        </div>
+        <button class="story-teaser__btn" onclick="openModal()">
+          Read Emily's Story <span>→</span>
+        </button>
       </div>
     </div>
   </section>
@@ -467,6 +670,73 @@
     </div>
   </footer>
 
+  <!-- Emily's Story Modal -->
+  <div class="modal-overlay" id="emilyModal">
+    <div class="modal">
+      <div class="modal__header">
+        <div class="modal__tag">The Reality of "In-Network"</div>
+        <h2 class="modal__title">Emily's Story</h2>
+        <button class="modal__close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal__body">
+        <h4>The Scenario</h4>
+        <p>Emily starts therapy in October at an <span class="highlight">in-network</span> therapy practice. She feels relieved: "They take my insurance!"</p>
+        <p>New year arrives. Deductible resets. Emily returns for her therapy in January—same practice, same provider.</p>
+        
+        <div class="scenario-box">
+          <p><strong>What Emily doesn't realize:</strong></p>
+          <p>Her deductible reset on January 1st. Her deductible is <strong>$5,000</strong>.</p>
+          <p>Until she personally pays $5,000 out-of-pocket in covered medical expenses, insurance does not begin sharing the cost.</p>
+        </div>
+        
+        <h4>The Surprise</h4>
+        <p>Even though her therapist is in-network, Emily is responsible for the <strong>full contracted rate</strong> per session until she hits that deductible.</p>
+        <p>Here's what practices often don't explain: The charge that goes to insurance is typically at a higher rate. The balance gets "written off" as part of the contracted rate—but <em>only after you hit your deductible</em>. Before that? The practice continues charging the higher rate, and you're responsible for all of it.</p>
+        <p>This surprises many people. Will Emily's care be disrupted?</p>
+        
+        <h4>The Part Most People Don't Know</h4>
+        <p>Here's where it gets complicated. The therapist is <strong>contractually bound</strong> by their agreement with the insurance company. That contract determines:</p>
+        <ul>
+          <li>The exact rate the therapist is allowed to charge</li>
+          <li>The therapist <strong>cannot</strong> reduce fees</li>
+          <li>The therapist <strong>cannot</strong> waive balances</li>
+          <li>The therapist <strong>cannot</strong> offer a sliding scale</li>
+        </ul>
+        <p>Therapists cannot alter that rate without violating their insurance contract. Now both client and therapist are in a bind.</p>
+        
+        <div class="takeaway">
+          <p>💡 <strong>The takeaway:</strong> "In-network" doesn't always mean cheaper—and it often means less flexibility. Being out-of-network allows us to work directly with you on what makes sense for your situation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
+  <script>
+    // Modal functions
+    function openModal() {
+      document.getElementById('emilyModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal() {
+      document.getElementById('emilyModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    
+    // Close modal on overlay click
+    document.getElementById('emilyModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+    
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
 </body>
 </html>
