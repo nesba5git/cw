@@ -1,5 +1,5 @@
 /**
- * Clearwater Wellness - Main JavaScript
+ * Clear Water Wellness - Main JavaScript
  * Minimal Editorial Theme
  */
 
@@ -100,14 +100,14 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
       
-      // In production, you would send this to your server
+      // In production, you would send this to your server or a form service
       // For now, we'll just show a success message
       console.log('Form submitted:', data);
       
       // Show success message
       const submitBtn = contactForm.querySelector('.form-submit');
       const originalText = submitBtn.textContent;
-      submitBtn.textContent = 'Message Sent!';
+      submitBtn.textContent = 'Request Submitted!';
       submitBtn.style.background = '#22c55e';
       
       // Reset form
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // =============================================
   // CONSOLE MESSAGE
   // =============================================
-  console.log('%c Clearwater Wellness ', 'background: #1a1a1a; color: #fff; padding: 10px 20px; font-size: 14px;');
-  console.log('Website by [Your Agency Name]');
+  console.log('%c Clear Water Wellness ', 'background: #1a1a1a; color: #fff; padding: 10px 20px; font-size: 14px;');
+  console.log('Making therapy less awkward since 2017');
   
 });

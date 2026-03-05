@@ -1,22 +1,23 @@
-# Clearwater Wellness Website
+# Clear Water Wellness Website
 
-A minimal, editorial-inspired website design for a therapy and wellness practice.
+A minimal, editorial-inspired website design for Clear Water Wellness LLC therapy practice in Wyomissing, PA.
 
 ## 📁 Project Structure
 
 ```
 clearwater-website/
-├── index.html          # Homepage
-├── about.html          # About page
-├── services.html       # Services page
-├── team.html           # Team/staff page
-├── contact.html        # Contact page with form
+├── index.html              # Homepage
+├── services.html           # Services page
+├── what-to-expect.html     # What to expect / process page
+├── team.html               # Team members page
+├── support-groups.html     # SOS Support Group page
+├── contact.html            # Contact page with form
 ├── css/
-│   └── styles.css      # Main stylesheet
+│   └── styles.css          # Main stylesheet
 ├── js/
-│   └── main.js         # JavaScript functionality
-├── images/             # Image assets (add your own)
-└── README.md           # This file
+│   └── main.js             # JavaScript functionality
+├── images/                 # Image assets (add your own)
+└── README.md               # This file
 ```
 
 ## 🎨 Design Features
@@ -39,6 +40,7 @@ This site can be deployed to any static hosting service:
 - GitHub Pages
 - Netlify
 - Vercel
+- Squarespace (export/import)
 - Any standard web hosting
 
 ## ✏️ Customization
@@ -70,37 +72,52 @@ To change fonts, update the Google Fonts link in each HTML file's `<head>` secti
 Replace the placeholder areas with your own images:
 1. Add images to the `/images` folder
 2. Update the HTML to reference your images
+3. Recommended: Use WebP format for best performance
 
 ## 📝 Pages Overview
 
 ### Homepage (index.html)
-- Hero section with headline and CTA
+- Hero section with main headline and CTA
 - Philosophy/intro section
-- Services grid
-- Process steps
+- Services grid preview
+- Process steps overview
+- SOS Support Group highlight
 - Call-to-action
 
-### About (about.html)
-- Company story
-- Core values
-- Approach to care
-
 ### Services (services.html)
-- Individual therapy
-- Couples counseling
-- Family therapy
-- Additional services
-- Pricing/insurance info
+- Individual therapy details
+- Couples & family therapy
+- Child & adolescent therapy
+- Additional services (Animal Assisted, Telehealth, Groups)
+- Conditions treated
+
+### What to Expect (what-to-expect.html)
+- Step-by-step process breakdown
+- Request appointment
+- Complete forms
+- First visit details
+- Ongoing journey
 
 ### Team (team.html)
-- Team member cards
-- Bios and specialties
-- Therapy dog feature
+- Team member profiles
+- Renee Stout, LCSW (Owner)
+- Bowie (Therapy Dog)
+- Michelle Capone, MS
+- Other therapists
+- Company story and values
+
+### Support Groups (support-groups.html)
+- Survivors of Suicide (SOS) details
+- Meeting schedule
+- What to expect
+- Location information
 
 ### Contact (contact.html)
-- Contact form
-- Location/hours/contact info
-- FAQ section
+- Contact form for appointment requests
+- Phone, email, fax info
+- Address and directions
+- Office hours
+- Client portal info
 
 ## 🔧 JavaScript Features
 
@@ -121,15 +138,21 @@ Replace the placeholder areas with your own images:
 ## 🎯 Next Steps
 
 1. **Add Real Images**: Replace placeholders with professional photos
-2. **Connect Form**: Integrate contact form with your email service (Formspree, Netlify Forms, etc.)
-3. **SEO**: Add meta descriptions, Open Graph tags, sitemap
-4. **Analytics**: Add Google Analytics or similar
-5. **SSL**: Ensure HTTPS when deploying
+2. **Connect Form**: Integrate contact form with your email service (Formspree, Netlify Forms, SimplePractice, etc.)
+3. **Client Portal Link**: Update the Client Portal links to your SimplePractice URL
+4. **SEO**: Add meta descriptions, Open Graph tags, sitemap
+5. **Analytics**: Add Google Analytics or similar
+6. **SSL**: Ensure HTTPS when deploying
 
-## 📄 License
+## 📞 Contact Information
 
-This template is provided for use by [Client Name]. 
+- **Phone**: (610) 750-9096
+- **Fax**: 610-750-9070
+- **Email**: info@cwwellness.com
+- **Address**: 4 Park Plaza, Wyomissing, PA 19610
+- **Hours**: Monday-Friday 8am-6pm
 
 ---
 
-Built with care ✨
+Clear Water Wellness LLC
+Making therapy less awkward since 2017 ✨
