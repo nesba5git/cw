@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header Design Options | Clear Water Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f5f5;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+    .page-title {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: #1a1a1a;
+      color: white;
+    }
+    .page-title h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    .page-title p {
+      color: rgba(255,255,255,0.7);
+      font-size: 15px;
+    }
+    
+    .option-section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .option-label {
+      display: inline-block;
+      background: #1a1a1a;
+      color: white;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      margin-bottom: 20px;
+    }
+    .option-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .option-desc {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 25px;
+      max-width: 600px;
+    }
+    .pros-cons {
+      display: flex;
+      gap: 30px;
+      margin-top: 20px;
+      font-size: 13px;
+    }
+    .pros, .cons {
+      flex: 1;
+    }
+    .pros h4, .cons h4 {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: #999;
+    }
+    .pros li { color: #059669; margin-bottom: 5px; }
+    .cons li { color: #dc2626; margin-bottom: 5px; }
+    
+    /* Header Demos */
+    .header-demo {
+      background: white;
+      border: 1px solid #ddd;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      border-bottom: 1px solid #eee;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+    }
+    .logo-text span {
+      font-style: italic;
+      font-weight: 400;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav a {
+      color: #1a1a1a;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 8px 14px;
+      transition: 0.2s;
+    }
+    .nav a:hover {
+      background: #f5f5f5;
+    }
+    .nav .dropdown {
+      position: relative;
+    }
+    .nav .dropdown > a::after {
+      content: ' ▾';
+      font-size: 10px;
+      opacity: 0.5;
+    }
+    .nav .cta {
+      background: #1a1a1a;
+      color: white !important;
+      padding: 10px 20px;
+      font-size: 13px;
+      margin-left: 10px;
+    }
+    .nav .cta:hover {
+      background: #333;
+    }
+    
+    /* Current (cluttered) */
+    .current-nav {
+      background: #fff5f5;
+      border-color: #ffcccc;
+    }
+    .current-nav .header {
+      border-bottom-color: #ffcccc;
+    }
+    
+    /* Divider */
+    .divider {
+      height: 1px;
+      background: #ddd;
+      margin: 60px 0;
+    }
+    
+    /* Recommendation badge */
+    .recommended {
+      position: relative;
+    }
+    .recommended::before {
+      content: '★ RECOMMENDED';
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: #059669;
+      color: white;
+      font-size: 10px;
+      letter-spacing: 1px;
+      padding: 5px 12px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="page-title">
+    <h1>Header Design Options</h1>
+    <p>Compare different navigation approaches — click to see dropdowns in action</p>
+  </div>
+
+  <!-- CURRENT (Problem) -->
+  <div class="option-section">
+    <span class="option-label">Current Issue</span>
+    <h2 class="option-title">Your Current Navigation (8 items)</h2>
+    <p class="option-desc">The current header has 7 navigation links plus a CTA button — this can feel overwhelming and makes it hard to find content quickly.</p>
+    
+    <div class="header-demo current-nav">
+      <div class="header">
+        <div class="logo">
+          <img src="images/logo.jpeg" alt="Clear Water Wellness">
+        </div>
+        <nav class="nav">
+          <a href="#">Services</a>
+          <a href="#">What to Expect</a>
+          <a href="#">The Team</a>
+          <a href="#">Support Groups</a>
+          <a href="#">Rates & Insurance</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+          <a href="#" class="cta">Request Appointment</a>
+        </nav>
+      </div>
+    </div>
+    
+    <div class="pros-cons">
+      <div class="cons">
+        <h4>Issues</h4>
+        <ul>
+          <li>Too many items competing for attention</li>
+          <li>Hard to scan quickly</li>
+          <li>Header feels crowded on smaller screens</li>
+          <li>No clear hierarchy or grouping</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- OPTION A: Dropdowns -->
+  <div class="option-section">
+    <span class="option-label">Option A</span>
+    <h2 class="option-title">Grouped Dropdowns (5 items)</h2>
+    <p class="option-desc">Group related pages into dropdown menus. Reduces visible items from 8 to 5 while keeping all content accessible.</p>
+    
+    <div class="header-demo recommended">
+      <div class="header">
+        <div class="logo">
+          <img src="images/logo.jpeg" alt="Clear Water Wellness">
+        </div>
+        <nav class="nav">
+          <a href="#">Services</a>
+          <div class="dropdown">
+            <a href="#">Get Started</a>
+            <!-- Dropdown: What to Expect, Rates & Insurance, FAQ -->
+          </div>
+          <div class="dropdown">
+            <a href="#">About</a>
+            <!-- Dropdown: The Team, Support Groups -->
+          </div>
+          <div class="dropdown">
+            <a href="#">Resources</a>
+            <!-- Dropdown: Blog, Crisis Resources -->
+          </div>
+          <a href="#">Contact</a>
+          <a href="#" class="cta">Request Appointment</a>
+        </nav>
+      </div>
+    </div>
+    
+    <p style="font-size: 13px; color: #666; margin-top: 15px;">
+      <strong>Dropdown contents:</strong><br>
+      • Get Started → What to Expect, Rates & Insurance, FAQ<br>
+      • About → The Team, Support Groups<br>
+      • Resources → Blog, Crisis Resources
+    </p>
+    
+    <div class="pros-cons">
+      <div class="pros">
+        <h4>Pros</h4>
+        <ul>
+          <li>Clean, uncluttered appearance</li>
+          <li>Logical groupings help users find content</li>
+          <li>Matches your current Squarespace structure</li>
+          <li>Scales well on mobile</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <h4>Cons</h4>
+        <ul>
+          <li>Requires extra click to see all options</li>
+          <li>Some users prefer flat navigation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- OPTION B: Minimal -->
+  <div class="option-section">
+    <span class="option-label">Option B</span>
+    <h2 class="option-title">Minimal Navigation (4 items)</h2>
+    <p class="option-desc">Ultra-clean approach with only essential top-level links. Secondary pages accessible through those landing pages or footer.</p>
+    
+    <div class="header-demo">
+      <div class="header">
+        <div class="logo">
+          <img src="images/logo.jpeg" alt="Clear Water Wellness">
+        </div>
+        <nav class="nav">
+          <a href="#">Services</a>
+          <a href="#">About</a>
+          <a href="#">Resources</a>
+          <a href="#">Contact</a>
+          <a href="#" class="cta">Get Started</a>
+        </nav>
+      </div>
+    </div>
+    
+    <p style="font-size: 13px; color: #666; margin-top: 15px;">
+      <strong>Page structure:</strong><br>
+      • Services → Links to Team, Support Groups, Rates within page<br>
+      • About → Team page with links to others<br>
+      • Resources → Blog, FAQ, Crisis Resources<br>
+      • Contact → Includes "What to Expect" info
+    </p>
+    
+    <div class="pros-cons">
+      <div class="pros">
+        <h4>Pros</h4>
+        <ul>
+          <li>Maximum visual clarity</li>
+          <li>Very easy to scan</li>
+          <li>Modern, confident aesthetic</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <h4>Cons</h4>
+        <ul>
+          <li>Some pages harder to find directly</li>
+          <li>Requires good internal linking</li>
+          <li>May need to restructure some pages</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- OPTION C: Hybrid -->
+  <div class="option-section">
+    <span class="option-label">Option C</span>
+    <h2 class="option-title">Hybrid Approach (5 items, 1 dropdown)</h2>
+    <p class="option-desc">Keep your most important pages visible, group only the secondary resources into a single dropdown.</p>
+    
+    <div class="header-demo">
+      <div class="header">
+        <div class="logo">
+          <img src="images/logo.jpeg" alt="Clear Water Wellness">
+        </div>
+        <nav class="nav">
+          <a href="#">Services</a>
+          <a href="#">The Team</a>
+          <a href="#">Rates</a>
+          <div class="dropdown">
+            <a href="#">More</a>
+            <!-- Dropdown: What to Expect, Support Groups, Blog, FAQ, Resources -->
+          </div>
+          <a href="#">Contact</a>
+          <a href="#" class="cta">Request Appointment</a>
+        </nav>
+      </div>
+    </div>
+    
+    <p style="font-size: 13px; color: #666; margin-top: 15px;">
+      <strong>Dropdown contents:</strong><br>
+      • More → What to Expect, Support Groups, Blog, FAQ, Crisis Resources
+    </p>
+    
+    <div class="pros-cons">
+      <div class="pros">
+        <h4>Pros</h4>
+        <ul>
+          <li>Key pages immediately visible</li>
+          <li>Simple mental model</li>
+          <li>Balance of clarity and access</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <h4>Cons</h4>
+        <ul>
+          <li>"More" is vague — users may not explore it</li>
+          <li>Support Groups may deserve more prominence</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Summary -->
+  <div class="option-section" style="text-align: center; padding-bottom: 80px;">
+    <h2 class="option-title">My Recommendation</h2>
+    <p style="color: #666; max-width: 600px; margin: 20px auto;">
+      <strong>Option A (Grouped Dropdowns)</strong> provides the best balance of cleanliness and discoverability. It matches the structure visitors expect from your current site, keeps the header uncluttered, and ensures every page is still just one click away.
+    </p>
+    <p style="color: #999; font-size: 14px; margin-top: 30px;">
+      Let me know which option you prefer and I'll implement it across all pages!
+    </p>
+  </div>
+
+</body>
+</html>

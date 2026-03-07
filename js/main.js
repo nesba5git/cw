@@ -40,8 +40,50 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Close mobile nav when clicking a link
-  const navLinks = document.querySelectorAll('.nav__link');
+  // Mobile dropdown toggles
+  const dropdownItems = document.querySelectorAll('.nav__item');
+  
+  dropdownItems.forEach(item => {
+    const dropdownLink = item.querySelector('.nav__link--dropdown');
+    const dropdown = item.querySelector('.nav__dropdown');
+    
+    if (dropdownLink && dropdown) {
+      dropdownLink.addEventListener('click', function(e) {
+        // Only handle on mobile
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          
+          // Close other dropdowns
+          dropdownItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('nav__item--open');
+            }
+          });
+          
+          // Toggle this dropdown
+          item.classList.toggle('nav__item--open');
+        }
+      });
+    }
+  });
+  
+  // Close mobile nav when clicking a dropdown link (not the toggle)
+  const dropdownLinks = document.querySelectorAll('.nav__dropdown-link');
+  dropdownLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      nav.classList.remove('nav--open');
+      navToggle.classList.remove('nav__toggle--active');
+      document.body.classList.remove('nav-open');
+      
+      // Close all dropdowns
+      dropdownItems.forEach(item => {
+        item.classList.remove('nav__item--open');
+      });
+    });
+  });
+  
+  // Close mobile nav when clicking non-dropdown links
+  const navLinks = document.querySelectorAll('.nav__link:not(.nav__link--dropdown)');
   navLinks.forEach(link => {
     link.addEventListener('click', function() {
       nav.classList.remove('nav--open');
@@ -164,12 +206,30 @@ document.addEventListener('DOMContentLoaded', function() {
   // =============================================
   function highlightCurrentPage() {
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('.nav__link');
     
+    // Check direct nav links
+    const navLinks = document.querySelectorAll('.nav__link:not(.nav__link--dropdown)');
     navLinks.forEach(link => {
       const href = link.getAttribute('href');
       if (href === currentPath) {
         link.classList.add('nav__link--active');
+      }
+    });
+    
+    // Check dropdown links and highlight parent if match found
+    const dropdownLinks = document.querySelectorAll('.nav__dropdown-link');
+    dropdownLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === currentPath) {
+        link.classList.add('nav__dropdown-link--active');
+        // Also highlight the parent dropdown trigger
+        const parentItem = link.closest('.nav__item');
+        if (parentItem) {
+          const parentLink = parentItem.querySelector('.nav__link--dropdown');
+          if (parentLink) {
+            parentLink.classList.add('nav__link--active');
+          }
+        }
       }
     });
   }
