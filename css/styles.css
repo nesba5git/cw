@@ -13,7 +13,15 @@
   --color-border: #e5e5e5;
   --color-border-light: #eeeeee;
   
-  /* Brand Colors */
+  /* Brand Colors - Option 3: Purposeful Palette
+     Each color has a specific role:
+     - Bright Pink: Primary CTAs and buttons
+     - Light Pink: Soft backgrounds, hover states
+     - Purple: Secondary accents, decorative elements
+     - Orange: Tertiary accents, highlights
+     - Yellow: Tags, labels, callouts
+     - Pink: Links, secondary buttons
+  */
   --color-light-pink: #ffcaf0;
   --color-pink: #ff7ac2;
   --color-bright-pink: #ff5c83;
@@ -21,12 +29,17 @@
   --color-orange: #ffc136;
   --color-yellow: #fcffbb;
   
-  /* Hover Backgrounds (lighter versions) */
-  --color-light-pink-bg: #fff5fb;
-  --color-pink-bg: #fff0f7;
+  /* Tinted Backgrounds */
+  --color-light-pink-bg: #fffbfd;
+  --color-pink-bg: #fff5f8;
   --color-purple-bg: #f8f4ff;
-  --color-orange-bg: #fffcf5;
-  --color-yellow-bg: #fffef8;
+  --color-orange-bg: #fff8eb;
+  --color-yellow-bg: #fffef5;
+  
+  /* Icon/Card Backgrounds (slightly stronger) */
+  --color-light-pink-icon: #ffe8f5;
+  --color-purple-icon: #e8d4ff;
+  --color-orange-icon: #fff3d4;
   
   --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Playfair Display', Georgia, serif;
@@ -213,22 +226,21 @@ p {
   letter-spacing: 0.3px;
   transition: var(--transition);
   padding: 10px 16px;
+  border-radius: 25px;
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.nav__link:hover,
-.nav__link--active {
-  color: var(--color-text);
+/* Option 3: Soft pink hover for all nav links */
+.nav__link:hover {
+  background: var(--color-pink-bg);
+  color: var(--color-bright-pink);
 }
 
-/* Colorful Nav Hovers - Option 6 Interactive Reveals */
-.nav__item:nth-child(1) .nav__link:hover { background: var(--color-light-pink); color: var(--color-text); }
-.nav__item:nth-child(2) .nav__link:hover { background: var(--color-purple-bg); color: var(--color-text); }
-.nav__item:nth-child(3) .nav__link:hover { background: var(--color-orange-bg); color: var(--color-text); }
-.nav__item:nth-child(4) .nav__link:hover { background: var(--color-pink-bg); color: var(--color-text); }
-.nav__item:nth-child(5) .nav__link:hover { background: var(--color-yellow-bg); color: var(--color-text); }
+.nav__link--active {
+  color: var(--color-bright-pink);
+}
 
 /* Dropdown Arrow */
 .nav__link--dropdown::after {
@@ -260,6 +272,7 @@ p {
   transform: translateY(10px);
   transition: var(--transition);
   padding: 10px 0;
+  border-radius: 8px;
 }
 
 .nav__item:hover .nav__dropdown {
@@ -276,31 +289,34 @@ p {
   transition: var(--transition);
 }
 
-/* Colorful Dropdown Hovers */
-.nav__item:nth-child(2) .nav__dropdown-link:hover { background: var(--color-purple-bg); color: var(--color-text); }
-.nav__item:nth-child(3) .nav__dropdown-link:hover { background: var(--color-orange-bg); color: var(--color-text); }
-.nav__item:nth-child(4) .nav__dropdown-link:hover { background: var(--color-pink-bg); color: var(--color-text); }
+/* Option 3: Consistent pink hover for dropdowns */
+.nav__dropdown-link:hover {
+  background: var(--color-pink-bg);
+  color: var(--color-bright-pink);
+}
 
 .nav__dropdown-link--active {
-  color: var(--color-text);
+  color: var(--color-bright-pink);
   font-weight: 500;
 }
 
 /* CTA Button */
-/* CTA Button */
+/* CTA Button - Option 3: Bright Pink Primary */
 .nav__cta {
   font-size: 13px;
   font-weight: 500;
   color: white;
-  background: var(--color-text);
+  background: var(--color-bright-pink);
   letter-spacing: 0.5px;
   padding: 12px 24px;
+  border-radius: 25px;
   transition: var(--transition);
   margin-left: 8px;
 }
 
 .nav__cta:hover {
-  background: var(--color-bright-pink);
+  background: #e8527a;
+  transform: translateY(-1px);
 }
 
 /* Mobile Menu Toggle */
@@ -320,13 +336,14 @@ p {
 }
 
 /* =============================================
-   HERO SECTION
+   HERO SECTION - Option 3: Purposeful Palette
    ============================================= */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   padding-top: 80px;
+  background: var(--color-light-pink-bg);
 }
 
 .hero__inner {
@@ -340,13 +357,17 @@ p {
   max-width: 540px;
 }
 
+/* Yellow tag/label - Option 3 */
 .hero__tag {
   display: inline-block;
   font-size: 11px;
-  letter-spacing: 3px;
-  color: var(--color-text-muted);
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--color-text);
   text-transform: uppercase;
   margin-bottom: var(--spacing-md);
+  background: var(--color-yellow);
+  padding: 8px 14px;
 }
 
 .hero__title {
@@ -394,7 +415,7 @@ p {
 .hero__image {
   position: relative;
   height: 600px;
-  background: linear-gradient(135deg, #e8e4df 0%, #d4cec6 100%);
+  background: linear-gradient(135deg, var(--color-light-pink) 0%, var(--color-purple) 100%);
   overflow: hidden;
 }
 
@@ -431,11 +452,15 @@ p {
 }
 
 .intro__tag {
+  display: inline-block;
   font-size: 11px;
-  letter-spacing: 3px;
-  color: var(--color-text-muted);
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--color-text);
   text-transform: uppercase;
   margin-bottom: var(--spacing-md);
+  background: var(--color-yellow);
+  padding: 6px 12px;
 }
 
 .intro__title {
@@ -487,11 +512,15 @@ p {
 }
 
 .services__tag {
+  display: inline-block;
   font-size: 11px;
-  letter-spacing: 3px;
-  color: var(--color-text-muted);
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--color-text);
   text-transform: uppercase;
   margin-bottom: var(--spacing-sm);
+  background: var(--color-yellow);
+  padding: 6px 12px;
 }
 
 .services__title {
@@ -508,21 +537,34 @@ p {
   background: white;
   padding: var(--spacing-lg);
   border: 1px solid var(--color-border-light);
+  border-radius: 8px;
   transition: var(--transition);
 }
 
-/* Colorful Service Card Hovers - Option 6 */
-.service-card:nth-child(1):hover { border-color: var(--color-pink); background: var(--color-pink-bg); }
-.service-card:nth-child(2):hover { border-color: var(--color-purple); background: var(--color-purple-bg); }
-.service-card:nth-child(3):hover { border-color: var(--color-orange); background: var(--color-orange-bg); }
-.service-card:nth-child(4):hover { border-color: var(--color-light-pink); background: var(--color-light-pink-bg); }
-.service-card:nth-child(5):hover { border-color: var(--color-bright-pink); background: var(--color-pink-bg); }
-.service-card:nth-child(6):hover { border-color: var(--color-purple); background: var(--color-purple-bg); }
+/* Option 3: Consistent pink accent on hover */
+.service-card:hover {
+  border-color: var(--color-light-pink);
+  box-shadow: 0 5px 20px rgba(255, 92, 131, 0.1);
+}
 
+/* Option 3: Colored icon backgrounds */
 .service-card__icon {
-  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
   margin-bottom: var(--spacing-md);
 }
+
+.service-card:nth-child(1) .service-card__icon { background: var(--color-light-pink-icon); }
+.service-card:nth-child(2) .service-card__icon { background: var(--color-purple-icon); }
+.service-card:nth-child(3) .service-card__icon { background: var(--color-orange-icon); }
+.service-card:nth-child(4) .service-card__icon { background: var(--color-light-pink-icon); }
+.service-card:nth-child(5) .service-card__icon { background: var(--color-purple-icon); }
+.service-card:nth-child(6) .service-card__icon { background: var(--color-orange-icon); }
 
 .service-card__title {
   font-family: var(--font-primary);
@@ -539,7 +581,7 @@ p {
 
 .service-card__link {
   font-size: 13px;
-  color: var(--color-text);
+  color: var(--color-bright-pink);
   letter-spacing: 0.5px;
   display: inline-flex;
   align-items: center;
@@ -570,11 +612,15 @@ p {
 }
 
 .approach__tag {
+  display: inline-block;
   font-size: 11px;
-  letter-spacing: 3px;
-  color: var(--color-text-muted);
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--color-text);
   text-transform: uppercase;
   margin-bottom: var(--spacing-md);
+  background: var(--color-yellow);
+  padding: 6px 12px;
 }
 
 .approach__title {
@@ -622,7 +668,7 @@ p {
 }
 
 /* =============================================
-   CTA SECTION
+   CTA SECTION - Option 3
    ============================================= */
 .cta {
   background: var(--color-text);
@@ -663,17 +709,18 @@ p {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.5px;
-  border-radius: 0;
+  border-radius: 25px;
   transition: var(--transition);
 }
 
 .btn--primary {
-  background: white;
-  color: var(--color-text);
+  background: var(--color-bright-pink);
+  color: white;
 }
 
 .btn--primary:hover {
-  background: rgba(255, 255, 255, 0.9);
+  background: #e8527a;
+  transform: translateY(-1px);
 }
 
 .btn--outline {
@@ -684,14 +731,16 @@ p {
 
 .btn--outline:hover {
   border-color: white;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* =============================================
-   SUPPORT GROUP HIGHLIGHT
+   SUPPORT GROUP HIGHLIGHT - Option 3
    ============================================= */
 .support-highlight {
-  background: var(--color-bg-alt);
-  border: 1px solid var(--color-border-light);
+  background: var(--color-purple-bg);
+  border: 1px solid var(--color-purple);
+  border-radius: 12px;
   padding: var(--spacing-xl);
   margin-top: var(--spacing-xl);
 }
@@ -704,11 +753,15 @@ p {
 }
 
 .support-highlight__tag {
+  display: inline-block;
   font-size: 11px;
-  letter-spacing: 3px;
-  color: var(--color-text-muted);
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--color-text);
   text-transform: uppercase;
   margin-bottom: var(--spacing-sm);
+  background: var(--color-yellow);
+  padding: 6px 12px;
 }
 
 .support-highlight__title {
@@ -783,15 +836,19 @@ p {
   width: 40px;
   height: 40px;
   border: 1px solid var(--color-border);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: var(--transition);
 }
 
-/* Colorful Social Hovers - Option 6 */
-.footer__social a:nth-child(1):hover { background: var(--color-light-pink); border-color: var(--color-light-pink); color: var(--color-text); }
-.footer__social a:nth-child(2):hover { background: var(--color-purple); border-color: var(--color-purple); color: white; }
+/* Option 3: Pink hover for social icons */
+.footer__social a:hover {
+  background: var(--color-bright-pink);
+  border-color: var(--color-bright-pink);
+  color: white;
+}
 
 .footer__col h4 {
   font-family: var(--font-primary);
@@ -815,7 +872,7 @@ p {
 }
 
 .footer__links a:hover {
-  color: var(--color-text);
+  color: var(--color-bright-pink);
 }
 
 .footer__bottom {
@@ -847,21 +904,25 @@ p {
 }
 
 /* =============================================
-   PAGE HEADERS
+   PAGE HEADERS - Option 3: Soft pink bg, yellow tags
    ============================================= */
 .page-header {
   padding: 180px 0 var(--spacing-2xl);
   text-align: center;
-  background: white;
+  background: var(--color-light-pink-bg);
   border-bottom: 1px solid var(--color-border-light);
 }
 
 .page-header__tag {
+  display: inline-block;
   font-size: 11px;
-  letter-spacing: 3px;
-  color: var(--color-text-muted);
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--color-text);
   text-transform: uppercase;
   margin-bottom: var(--spacing-sm);
+  background: var(--color-yellow);
+  padding: 6px 12px;
 }
 
 .page-header__title {
@@ -886,27 +947,24 @@ p {
 .team-card {
   text-align: center;
   padding: var(--spacing-md);
+  border-radius: 8px;
   transition: var(--transition);
 }
 
-/* Colorful Team Card Hovers - Option 6 */
-.team-card:nth-child(1):hover { background: var(--color-light-pink-bg); }
-.team-card:nth-child(2):hover { background: var(--color-purple-bg); }
-.team-card:nth-child(3):hover { background: var(--color-orange-bg); }
-.team-card:nth-child(4):hover { background: var(--color-pink-bg); }
-.team-card:nth-child(5):hover { background: var(--color-yellow-bg); }
-.team-card:nth-child(6):hover { background: var(--color-light-pink-bg); }
-.team-card:nth-child(7):hover { background: var(--color-purple-bg); }
-.team-card:nth-child(8):hover { background: var(--color-orange-bg); }
+/* Option 3: Consistent soft pink hover */
+.team-card:hover {
+  background: var(--color-pink-bg);
+}
 
 .team-card__image {
   aspect-ratio: 3/4;
-  background: linear-gradient(135deg, #e8e4df 0%, #d4cec6 100%);
+  background: linear-gradient(135deg, var(--color-light-pink) 0%, var(--color-purple) 50%, var(--color-orange) 100%);
   margin-bottom: var(--spacing-md);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 8px;
 }
 
 .team-card__image img {
@@ -985,6 +1043,7 @@ p {
   background: white;
   padding: var(--spacing-xl);
   border: 1px solid var(--color-border-light);
+  border-radius: 12px;
 }
 
 .form-group {
@@ -1007,6 +1066,7 @@ p {
   font-family: inherit;
   font-size: 15px;
   border: 1px solid var(--color-border);
+  border-radius: 8px;
   background: var(--color-bg);
   transition: var(--transition);
 }
@@ -1015,7 +1075,8 @@ p {
 .form-group textarea:focus,
 .form-group select:focus {
   outline: none;
-  border-color: var(--color-text);
+  border-color: var(--color-bright-pink);
+  box-shadow: 0 0 0 3px rgba(255, 92, 131, 0.1);
 }
 
 .form-group textarea {
@@ -1026,18 +1087,20 @@ p {
 .form-submit {
   width: 100%;
   padding: 18px;
-  background: var(--color-text);
+  background: var(--color-bright-pink);
   color: white;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.5px;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
   transition: var(--transition);
 }
 
 .form-submit:hover {
-  background: var(--color-bright-pink);
+  background: #e8527a;
+  transform: translateY(-1px);
 }
 
 /* =============================================
