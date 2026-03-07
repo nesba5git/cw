@@ -13,6 +13,21 @@
   --color-border: #e5e5e5;
   --color-border-light: #eeeeee;
   
+  /* Brand Colors */
+  --color-light-pink: #ffcaf0;
+  --color-pink: #ff7ac2;
+  --color-bright-pink: #ff5c83;
+  --color-purple: #ba95ff;
+  --color-orange: #ffc136;
+  --color-yellow: #fcffbb;
+  
+  /* Hover Backgrounds (lighter versions) */
+  --color-light-pink-bg: #fff5fb;
+  --color-pink-bg: #fff0f7;
+  --color-purple-bg: #f8f4ff;
+  --color-orange-bg: #fffcf5;
+  --color-yellow-bg: #fffef8;
+  
   --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Playfair Display', Georgia, serif;
   
@@ -25,6 +40,9 @@
   
   --max-width: 1200px;
   --transition: 0.3s ease;
+  
+  /* Rainbow Gradient */
+  --gradient-rainbow: linear-gradient(90deg, #ffcaf0, #ff7ac2, #ff5c83, #ba95ff, #ffc136, #fcffbb);
 }
 
 /* Reset & Base */
@@ -182,7 +200,7 @@ p {
 .nav__list {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .nav__item {
@@ -204,6 +222,13 @@ p {
 .nav__link--active {
   color: var(--color-text);
 }
+
+/* Colorful Nav Hovers - Option 6 Interactive Reveals */
+.nav__item:nth-child(1) .nav__link:hover { background: var(--color-light-pink); color: var(--color-text); }
+.nav__item:nth-child(2) .nav__link:hover { background: var(--color-purple-bg); color: var(--color-text); }
+.nav__item:nth-child(3) .nav__link:hover { background: var(--color-orange-bg); color: var(--color-text); }
+.nav__item:nth-child(4) .nav__link:hover { background: var(--color-pink-bg); color: var(--color-text); }
+.nav__item:nth-child(5) .nav__link:hover { background: var(--color-yellow-bg); color: var(--color-text); }
 
 /* Dropdown Arrow */
 .nav__link--dropdown::after {
@@ -251,16 +276,17 @@ p {
   transition: var(--transition);
 }
 
-.nav__dropdown-link:hover {
-  background: var(--color-bg-alt);
-  color: var(--color-text);
-}
+/* Colorful Dropdown Hovers */
+.nav__item:nth-child(2) .nav__dropdown-link:hover { background: var(--color-purple-bg); color: var(--color-text); }
+.nav__item:nth-child(3) .nav__dropdown-link:hover { background: var(--color-orange-bg); color: var(--color-text); }
+.nav__item:nth-child(4) .nav__dropdown-link:hover { background: var(--color-pink-bg); color: var(--color-text); }
 
 .nav__dropdown-link--active {
   color: var(--color-text);
   font-weight: 500;
 }
 
+/* CTA Button */
 /* CTA Button */
 .nav__cta {
   font-size: 13px;
@@ -274,7 +300,7 @@ p {
 }
 
 .nav__cta:hover {
-  background: #333;
+  background: var(--color-bright-pink);
 }
 
 /* Mobile Menu Toggle */
@@ -360,9 +386,9 @@ p {
 }
 
 .hero__cta:hover .hero__cta-arrow {
-  background: var(--color-text);
+  background: var(--color-bright-pink);
   color: white;
-  border-color: var(--color-text);
+  border-color: var(--color-bright-pink);
 }
 
 .hero__image {
@@ -485,9 +511,13 @@ p {
   transition: var(--transition);
 }
 
-.service-card:hover {
-  border-color: var(--color-text);
-}
+/* Colorful Service Card Hovers - Option 6 */
+.service-card:nth-child(1):hover { border-color: var(--color-pink); background: var(--color-pink-bg); }
+.service-card:nth-child(2):hover { border-color: var(--color-purple); background: var(--color-purple-bg); }
+.service-card:nth-child(3):hover { border-color: var(--color-orange); background: var(--color-orange-bg); }
+.service-card:nth-child(4):hover { border-color: var(--color-light-pink); background: var(--color-light-pink-bg); }
+.service-card:nth-child(5):hover { border-color: var(--color-bright-pink); background: var(--color-pink-bg); }
+.service-card:nth-child(6):hover { border-color: var(--color-purple); background: var(--color-purple-bg); }
 
 .service-card__icon {
   font-size: 2rem;
@@ -759,11 +789,9 @@ p {
   transition: var(--transition);
 }
 
-.footer__social a:hover {
-  background: var(--color-text);
-  color: white;
-  border-color: var(--color-text);
-}
+/* Colorful Social Hovers - Option 6 */
+.footer__social a:nth-child(1):hover { background: var(--color-light-pink); border-color: var(--color-light-pink); color: var(--color-text); }
+.footer__social a:nth-child(2):hover { background: var(--color-purple); border-color: var(--color-purple); color: white; }
 
 .footer__col h4 {
   font-family: var(--font-primary);
@@ -857,7 +885,19 @@ p {
 
 .team-card {
   text-align: center;
+  padding: var(--spacing-md);
+  transition: var(--transition);
 }
+
+/* Colorful Team Card Hovers - Option 6 */
+.team-card:nth-child(1):hover { background: var(--color-light-pink-bg); }
+.team-card:nth-child(2):hover { background: var(--color-purple-bg); }
+.team-card:nth-child(3):hover { background: var(--color-orange-bg); }
+.team-card:nth-child(4):hover { background: var(--color-pink-bg); }
+.team-card:nth-child(5):hover { background: var(--color-yellow-bg); }
+.team-card:nth-child(6):hover { background: var(--color-light-pink-bg); }
+.team-card:nth-child(7):hover { background: var(--color-purple-bg); }
+.team-card:nth-child(8):hover { background: var(--color-orange-bg); }
 
 .team-card__image {
   aspect-ratio: 3/4;
@@ -997,7 +1037,7 @@ p {
 }
 
 .form-submit:hover {
-  opacity: 0.9;
+  background: var(--color-bright-pink);
 }
 
 /* =============================================
@@ -1161,6 +1201,18 @@ p {
     flex-wrap: wrap;
     justify-content: center;
   }
+}
+
+/* =============================================
+   RAINBOW ACCENT BAR - Option 6
+   ============================================= */
+.rainbow-bar {
+  height: 3px;
+  background: var(--gradient-rainbow);
+}
+
+.rainbow-bar--thick {
+  height: 5px;
 }
 
 /* =============================================
