@@ -19,17 +19,40 @@
   <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
-        <a href="index.html" class="logo">Clear Water <span>Wellness</span></a>
+        <a href="index.html" class="logo">
+          <img src="images/logo.jpeg" alt="Clear Water Wellness" class="logo__image">
+        </a>
         
         <nav class="nav">
           <ul class="nav__list">
-            <li><a href="services.html" class="nav__link nav__link--active">Services</a></li>
-            <li><a href="what-to-expect.html" class="nav__link">What to Expect</a></li>
-            <li><a href="team.html" class="nav__link">The Team</a></li>
-            <li><a href="support-groups.html" class="nav__link">Support Groups</a></li>
-            <li><a href="rates-insurance.html" class="nav__link">Rates & Insurance</a></li>
-            <li><a href="blog.html" class="nav__link">Blog</a></li>
-            <li><a href="contact.html" class="nav__link">Contact</a></li>
+            <li class="nav__item">
+              <a href="services.html" class="nav__link">Services</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--dropdown">Get Started</a>
+              <div class="nav__dropdown">
+                <a href="what-to-expect.html" class="nav__dropdown-link">What to Expect</a>
+                <a href="rates-insurance.html" class="nav__dropdown-link">Rates & Insurance</a>
+                <a href="faq.html" class="nav__dropdown-link">FAQ</a>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--dropdown">About</a>
+              <div class="nav__dropdown">
+                <a href="team.html" class="nav__dropdown-link">The Team</a>
+                <a href="support-groups.html" class="nav__dropdown-link">Support Groups</a>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--dropdown">Resources</a>
+              <div class="nav__dropdown">
+                <a href="blog.html" class="nav__dropdown-link">Blog</a>
+                <a href="resources.html" class="nav__dropdown-link">Crisis Resources</a>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="contact.html" class="nav__link">Contact</a>
+            </li>
           </ul>
           <a href="contact.html" class="nav__cta">Request Appointment</a>
         </nav>
@@ -173,24 +196,54 @@
     </div>
   </section>
 
-  <!-- Additional Services -->
+  <!-- Specialized Services -->
   <section class="services section">
     <div class="container">
       <div class="services__header">
-        <span class="services__tag">Additional Support</span>
-        <h2 class="services__title">More Services</h2>
+        <span class="services__tag">Specialized Treatment</span>
+        <h2 class="services__title">Specialized Services</h2>
       </div>
       
       <div class="services__grid">
         <div class="service-card">
+          <div class="service-card__icon">🧠</div>
+          <h3 class="service-card__title">EMDR Therapy</h3>
+          <p class="service-card__text">Eye Movement Desensitization & Reprocessing is an effective, evidence-based approach to help process and heal from traumatic experiences and PTSD. It works by guiding the brain to reprocess memories, making them less emotionally overwhelming.</p>
+          <a href="team.html#morgan" class="service-card__link">
+            Provided by Morgan <span>→</span>
+          </a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-card__icon">🎯</div>
+          <h3 class="service-card__title">ADHD Evaluation</h3>
+          <p class="service-card__text">Thorough assessments using DSM-5TR criteria, multi-source input, and narrative reports that support 504/IEP plans or medication management discussions with your provider.</p>
+          <a href="contact.html" class="service-card__link">
+            Learn more <span>→</span>
+          </a>
+        </div>
+        
+        <div class="service-card">
           <div class="service-card__icon">🐕</div>
           <h3 class="service-card__title">Animal Assisted Therapy</h3>
-          <p class="service-card__text">Owner/Therapist Renee Stout, LCSW comes accompanied by her certified therapy dog Bowie, a much-loved Goldendoodle. Bowie provides comfort, connection, and unconditional love during sessions.</p>
+          <p class="service-card__text">Owner/Therapist Renee Stout, LCSW comes accompanied by her certified therapy dog Bowie, a much-loved Newfypoo. Bowie provides comfort, connection, and unconditional love during sessions.</p>
           <a href="team.html" class="service-card__link">
             Meet Bowie <span>→</span>
           </a>
         </div>
-        
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Services -->
+  <section class="services section" style="background: white;">
+    <div class="container">
+      <div class="services__header">
+        <span class="services__tag">Additional Support</span>
+        <h2 class="services__title">More Ways We Help</h2>
+      </div>
+      
+      <div class="services__grid">
         <div class="service-card">
           <div class="service-card__icon">💻</div>
           <h3 class="service-card__title">Telehealth Sessions</h3>
@@ -201,11 +254,29 @@
         </div>
         
         <div class="service-card">
+          <div class="service-card__icon">🏫</div>
+          <h3 class="service-card__title">School & Medical Collaboration</h3>
+          <p class="service-card__text">With consent, we work directly with pediatricians, school teams, and outside specialists to ensure holistic, coordinated care for you or your child.</p>
+          <a href="contact.html" class="service-card__link">
+            Learn more <span>→</span>
+          </a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-card__icon">🆘</div>
+          <h3 class="service-card__title">Crisis Navigation & Referrals</h3>
+          <p class="service-card__text">Help determining level of care, support with transitions to acute care or wraparound services when needed.</p>
+          <a href="resources.html" class="service-card__link">
+            Crisis resources <span>→</span>
+          </a>
+        </div>
+        
+        <div class="service-card">
           <div class="service-card__icon">🤝</div>
           <h3 class="service-card__title">Support Groups</h3>
-          <p class="service-card__text">We host the Survivors of Suicide (SOS) support group, free to all attendees. Find community and shared understanding with others on similar journeys.</p>
+          <p class="service-card__text">We host three free support groups: Survivors of Suicide, Grief Support, and Pregnancy & Infant Loss. Find community with others on similar journeys.</p>
           <a href="support-groups.html" class="service-card__link">
-            Learn more <span>→</span>
+            View groups <span>→</span>
           </a>
         </div>
       </div>
@@ -213,26 +284,26 @@
   </section>
 
   <!-- Conditions We Treat -->
-  <section class="intro section" style="background: white;">
+  <section class="intro section">
     <div class="container">
       <div class="intro__inner">
         <div class="intro__content">
           <span class="intro__tag">Areas of Focus</span>
-          <h2 class="intro__title">Conditions<br>we treat</h2>
-          <p class="intro__text">Our therapists specialize in a wide range of mental health concerns. We use evidence-based approaches including CBT, DBT, Play Therapy, and Animal Assisted Intervention.</p>
+          <h2 class="intro__title">What we treat</h2>
+          <p class="intro__text">Our therapists specialize in a wide range of mental health concerns. We use evidence-based approaches including CBT, DBT, EMDR, IFS, Play Therapy, and Animal Assisted Intervention.</p>
           <ul style="columns: 2; column-gap: 40px; margin-top: 20px;">
             <li style="margin-bottom: 12px; color: #666;">• Anxiety</li>
             <li style="margin-bottom: 12px; color: #666;">• Depression</li>
+            <li style="margin-bottom: 12px; color: #666;">• ADHD</li>
             <li style="margin-bottom: 12px; color: #666;">• Trauma & PTSD</li>
-            <li style="margin-bottom: 12px; color: #666;">• Sexual Abuse</li>
             <li style="margin-bottom: 12px; color: #666;">• Self-Esteem Issues</li>
             <li style="margin-bottom: 12px; color: #666;">• LGBTQ+ Issues</li>
-            <li style="margin-bottom: 12px; color: #666;">• Gender Identity</li>
+            <li style="margin-bottom: 12px; color: #666;">• Life Transitions</li>
             <li style="margin-bottom: 12px; color: #666;">• Relationship Issues</li>
             <li style="margin-bottom: 12px; color: #666;">• Anger Management</li>
-            <li style="margin-bottom: 12px; color: #666;">• Substance Abuse</li>
-            <li style="margin-bottom: 12px; color: #666;">• Bullying</li>
+            <li style="margin-bottom: 12px; color: #666;">• Stress Management</li>
             <li style="margin-bottom: 12px; color: #666;">• Grief & Loss</li>
+            <li style="margin-bottom: 12px; color: #666;">• And more!</li>
           </ul>
         </div>
         <div class="intro__stats">
@@ -241,14 +312,26 @@
             <div class="stat__label">Cognitive Behavioral</div>
           </div>
           <div class="stat">
-            <div class="stat__number">DBT</div>
-            <div class="stat__label">Dialectical Behavioral</div>
+            <div class="stat__number">EMDR</div>
+            <div class="stat__label">Trauma Processing</div>
           </div>
           <div class="stat">
-            <div class="stat__number">AAT</div>
-            <div class="stat__label">Animal Assisted</div>
+            <div class="stat__number">IFS</div>
+            <div class="stat__label">Internal Family Systems</div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Treat -->
+  <section class="section" style="background: white;">
+    <div class="container">
+      <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+        <span class="intro__tag">Who We See</span>
+        <h2 class="intro__title" style="margin-bottom: 20px;">Who we treat</h2>
+        <p class="intro__text">We provide services for children, adolescents, adults, and geriatric populations.</p>
+        <p style="font-size: 18px; color: #1a1a1a; font-weight: 500; margin-top: 20px; padding: 20px; background: #f9f9f9; border: 1px solid #eee;">Clients must be 5 years of age or older.</p>
       </div>
     </div>
   </section>
@@ -297,7 +380,7 @@
           <ul class="footer__links">
             <li><a href="team.html">The Team</a></li>
             <li><a href="support-groups.html">Support Groups</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="faq.html">FAQ</a></li>
             <li><a href="blog.html">Mental Health Blog</a></li>
           </ul>
         </div>
