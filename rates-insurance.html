@@ -176,7 +176,40 @@
     .story-teaser__btn:hover {
       background: #333;
     }
-    
+
+    @media (max-width: 768px) {
+      .rate-card {
+        padding: 30px 20px;
+      }
+      .rate-card__price {
+        font-size: 2.5rem;
+      }
+      .story-teaser {
+        flex-direction: column;
+        text-align: center;
+      }
+      .story-teaser__content {
+        min-width: 0;
+      }
+      .story-teaser__btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .benefits-widget {
+        padding: 40px 20px;
+      }
+      .modal__header {
+        padding: 25px 20px;
+      }
+      .modal__body {
+        padding: 25px 20px;
+      }
+      .modal__close {
+        top: 15px;
+        right: 15px;
+      }
+    }
+
     /* Modal Styles */
     .modal-overlay {
       position: fixed;
@@ -539,8 +572,8 @@
         <h2 class="services__title">How It Works</h2>
       </div>
       
-      <div class="approach__inner" style="gap: 60px;">
-        <div style="flex: 1;">
+      <div class="approach__inner">
+        <div>
           <div class="approach__list">
             <div class="approach__item" style="margin-bottom: 30px;">
               <span class="step-number">1</span>
@@ -572,8 +605,8 @@
             </div>
           </div>
         </div>
-        
-        <div style="flex: 1;">
+
+        <div>
           <div class="question-list">
             <h4 style="margin-bottom: 20px; font-family: var(--font-display); font-size: 1.25rem;">Questions to Ask Your Insurance</h4>
             <div class="question-list__item">

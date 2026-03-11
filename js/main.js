@@ -4,7 +4,60 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-  
+
+  // =============================================
+  // PLATFORM DETECTION
+  // =============================================
+  const PlatformDetect = (function() {
+    const ua = navigator.userAgent || '';
+    const platform = navigator.platform || '';
+
+    const isIOS = /iPhone|iPad|iPod/.test(ua) || (platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const isAndroid = /Android/.test(ua);
+    const isMobileUA = /Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/.test(ua);
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
+    const isMobile = isMobileUA || (isTouchDevice && isSmallScreen);
+    const isTablet = isTouchDevice && !isMobileUA && window.matchMedia('(min-width: 769px) and (max-width: 1024px)').matches;
+    const isDesktop = !isMobile && !isTablet;
+
+    const os = isIOS ? 'ios' : isAndroid ? 'android' : 'other';
+
+    // Apply CSS classes to the document element for easy styling hooks
+    const root = document.documentElement;
+    root.classList.add(isMobile ? 'is-mobile' : isTablet ? 'is-tablet' : 'is-desktop');
+    root.classList.add('is-' + os);
+    if (isTouchDevice) root.classList.add('is-touch');
+
+    // Listen for orientation and resize changes to update detection
+    function update() {
+      const nowSmall = window.matchMedia('(max-width: 768px)').matches;
+      const nowMobile = isMobileUA || (isTouchDevice && nowSmall);
+      const nowTablet = isTouchDevice && !isMobileUA && window.matchMedia('(min-width: 769px) and (max-width: 1024px)').matches;
+
+      root.classList.toggle('is-mobile', nowMobile);
+      root.classList.toggle('is-tablet', nowTablet);
+      root.classList.toggle('is-desktop', !nowMobile && !nowTablet);
+    }
+
+    window.addEventListener('resize', update);
+    window.addEventListener('orientationchange', update);
+
+    return {
+      isMobile: isMobile,
+      isTablet: isTablet,
+      isDesktop: isDesktop,
+      isIOS: isIOS,
+      isAndroid: isAndroid,
+      isTouchDevice: isTouchDevice,
+      os: os
+    };
+  })();
+
+  // Expose platform info globally
+  window.CWW = window.CWW || {};
+  window.CWW.platform = PlatformDetect;
+
   // =============================================
   // HEADER SCROLL BEHAVIOR
   // =============================================
