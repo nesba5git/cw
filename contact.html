@@ -141,7 +141,8 @@
           </div>
         </div>
 
-        <form class="contact-form" id="contactForm" novalidate>
+        <form class="contact-form" id="contactForm" name="contact" data-netlify="true" novalidate>
+          <input type="hidden" name="form-name" value="contact">
           <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 20px;">Request an Appointment</h3>
 
           <div class="form-group">
@@ -198,7 +199,7 @@
             ✓ Your request has been received! We'll be in touch within 1 business day to confirm your appointment details.
           </div>
 
-          <!-- Fallback notice (shown if Formspree is not configured) -->
+          <!-- Fallback notice (shown if Netlify Forms submission fails) -->
           <div class="form-fallback" role="alert">
             Your email client has opened with your request pre-filled — please send it to complete your submission.
             Alternatively, call us at <a href="tel:6107509096">(610) 750-9096</a> or email

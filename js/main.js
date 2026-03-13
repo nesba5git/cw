@@ -7,13 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // =============================================
   // CONFIGURATION
-  // Backup plan: if Formspree is not configured or fails,
-  // the form falls back to opening a pre-filled mailto link.
+  // Form submissions are handled by Netlify Forms automatically.
+  // No third-party account needed — Netlify detects data-netlify="true" at deploy time.
+  // Backup: if the Netlify POST fails, falls back to a pre-filled mailto link.
   // =============================================
   const CONFIG = {
-    // Sign up at formspree.io, create a form, and paste the 8-char ID here.
-    // Leave as 'YOUR_FORM_ID' to use the mailto fallback only.
-    formspreeId: 'YOUR_FORM_ID',
     backupEmail: 'info@cwwellness.com',
   };
 
@@ -296,19 +294,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
       let submitted = false;
 
-      // Primary: Formspree
-      const formId = CONFIG.formspreeId;
-      if (formId && formId !== 'YOUR_FORM_ID') {
-        try {
-          const res = await fetch(`https://formspree.io/f/${formId}`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify(data),
-          });
-          if (res.ok) submitted = true;
-        } catch (err) {
-          console.warn('Formspree failed, using mailto fallback.', err);
-        }
+      // Primary: Netlify Forms (requires data-netlify="true" on the form element)
+      try {
+        const encoded = new URLSearchParams({ 'form-name': 'contact', ...data }).toString();
+        const res = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encoded,
+        });
+        if (res.ok) submitted = true;
+      } catch (err) {
+        console.warn('Netlify Forms submission failed, using mailto fallback.', err);
       }
 
       submitBtn.classList.remove('is-loading');
