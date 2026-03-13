@@ -1,0 +1,150 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#fdf8f3"/>
+  <rect y="600" width="1200" height="200" fill="#ede6dd"/>
+  <rect y="590" width="1200" height="14" fill="#e0d8cf"/>
+
+  <!-- Warm gradient top -->
+  <radialGradient id="warmTop" cx="40%" cy="20%" r="65%">
+    <stop offset="0%" stop-color="rgba(246,232,177,0.2)"/>
+    <stop offset="100%" stop-color="rgba(246,232,177,0)"/>
+  </radialGradient>
+  <rect width="1200" height="800" fill="url(#warmTop)"/>
+
+  <!-- Bright playful window -->
+  <rect x="850" y="60" width="280" height="400" rx="5" fill="#e8f4fa"/>
+  <rect x="850" y="60" width="280" height="400" rx="5" fill="none" stroke="#d8cfc6" stroke-width="9"/>
+  <line x1="988" y1="60" x2="988" y2="460" stroke="#e0d8d0" stroke-width="5"/>
+  <line x1="850" y1="228" x2="1130" y2="228" stroke="#e0d8d0" stroke-width="5"/>
+  <rect x="855" y="65" width="129" height="159" fill="#c8e6f4"/>
+  <rect x="993" y="65" width="133" height="159" fill="#c8e6f4"/>
+  <!-- Sun in window -->
+  <circle cx="920" cy="130" r="30" fill="#f6e8b1" opacity="0.9"/>
+  <!-- Sun rays -->
+  <line x1="920" y1="90" x2="920" y2="75" stroke="#f6e8b1" stroke-width="3" opacity="0.7"/>
+  <line x1="948" y1="100" x2="958" y2="88" stroke="#f6e8b1" stroke-width="3" opacity="0.7"/>
+  <line x1="958" y1="130" x2="975" y2="130" stroke="#f6e8b1" stroke-width="3" opacity="0.7"/>
+  <line x1="892" y1="100" x2="882" y2="88" stroke="#f6e8b1" stroke-width="3" opacity="0.7"/>
+  <line x1="882" y1="130" x2="865" y2="130" stroke="#f6e8b1" stroke-width="3" opacity="0.7"/>
+
+  <!-- Colorful block/toy shelf -->
+  <rect x="40" y="300" width="160" height="300" rx="5" fill="#d8c8b0"/>
+  <rect x="40" y="300" width="160" height="10" fill="#c8b8a0"/>
+  <rect x="40" y="440" width="160" height="10" fill="#c8b8a0"/>
+  <rect x="40" y="560" width="160" height="10" fill="#c8b8a0"/>
+  <!-- Colorful toys/blocks on shelf -->
+  <rect x="55" y="316" width="38" height="38" rx="5" fill="#f4a261"/>
+  <rect x="98" y="316" width="38" height="38" rx="5" fill="#b8a9c9"/>
+  <rect x="141" y="322" width="42" height="32" rx="5" fill="#7fad7f"/>
+  <rect x="55" y="360" width="32" height="32" rx="4" fill="#f9c5d1"/>
+  <circle cx="138" cy="375" r="20" fill="#a8d8ea"/>
+  <!-- Books row 2 -->
+  <rect x="55" y="456" width="20" height="72" rx="2" fill="#c4788a"/>
+  <rect x="77" y="462" width="16" height="66" rx="2" fill="#7a8fc8"/>
+  <rect x="95" y="456" width="22" height="72" rx="2" fill="#f4a261"/>
+  <rect x="119" y="460" width="18" height="68" rx="2" fill="#7fad7f"/>
+  <rect x="139" y="456" width="14" height="72" rx="2" fill="#b8a9c9"/>
+  <rect x="155" y="462" width="16" height="66" rx="2" fill="#f9c5d1"/>
+  <!-- Stuffed animal -->
+  <circle cx="90" cy="540" r="24" fill="#f9c5d1"/>
+  <ellipse cx="72" cy="524" rx="12" ry="10" fill="#f9c5d1"/>
+  <ellipse cx="108" cy="524" rx="12" ry="10" fill="#f9c5d1"/>
+  <circle cx="84" cy="538" r="4" fill="#e8a0b0"/>
+  <circle cx="96" cy="538" r="4" fill="#e8a0b0"/>
+  <path d="M82,548 Q90,554 98,548" fill="none" stroke="#e8a0b0" stroke-width="2"/>
+
+  <!-- Adult therapist - chair on left area -->
+  <!-- Chair -->
+  <rect x="200" y="460" width="180" height="120" rx="14" fill="#b8a9c9"/>
+  <rect x="200" y="380" width="180" height="98" rx="14" fill="#a898b8"/>
+  <rect x="184" y="408" width="33" height="150" rx="12" fill="#9888a8"/>
+  <rect x="363" y="408" width="33" height="150" rx="12" fill="#9888a8"/>
+  <rect x="222" y="572" width="14" height="36" rx="5" fill="#887898"/>
+  <rect x="344" y="572" width="14" height="36" rx="5" fill="#887898"/>
+
+  <!-- Adult therapist body -->
+  <ellipse cx="290" cy="420" rx="55" ry="82" fill="#7a8fc8"/>
+  <ellipse cx="290" cy="448" rx="48" ry="62" fill="#6a7fb8"/>
+  <!-- Head -->
+  <circle cx="290" cy="308" r="58" fill="#d4a878"/>
+  <!-- Hair -->
+  <ellipse cx="290" cy="275" rx="58" ry="38" fill="#7a5535"/>
+  <!-- Ponytail suggestion -->
+  <ellipse cx="290" cy="268" rx="50" ry="28" fill="#6a4525"/>
+  <rect x="334" y="258" width="14" height="50" rx="7" fill="#6a4525"/>
+  <!-- Face -->
+  <ellipse cx="273" cy="305" rx="7" ry="9" fill="#4a3828" opacity="0.85"/>
+  <ellipse cx="307" cy="305" rx="7" ry="9" fill="#4a3828" opacity="0.85"/>
+  <path d="M278,326 Q290,338 302,328" fill="none" stroke="#b47848" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Warm smile lines -->
+  <path d="M268,310 Q271,318 268,322" fill="none" stroke="#c4885a" stroke-width="1.5" opacity="0.5"/>
+  <path d="M312,310 Q309,318 312,322" fill="none" stroke="#c4885a" stroke-width="1.5" opacity="0.5"/>
+  <!-- Arms reaching forward/open gesture -->
+  <ellipse cx="230" cy="450" rx="20" ry="44" fill="#d4a878" transform="rotate(-20 230 450)"/>
+  <ellipse cx="350" cy="450" rx="20" ry="44" fill="#d4a878" transform="rotate(20 350 450)"/>
+
+  <!-- Child - floor area, playing -->
+  <!-- Sitting on floor with toys -->
+  <!-- Body -->
+  <ellipse cx="680" cy="510" rx="52" ry="70" fill="#f4a261"/>
+  <ellipse cx="680" cy="535" rx="45" ry="52" fill="#e49251"/>
+  <!-- Legs spread on floor -->
+  <ellipse cx="635" cy="575" rx="30" ry="16" fill="#f4a261" transform="rotate(30 635 575)"/>
+  <ellipse cx="725" cy="575" rx="30" ry="16" fill="#f4a261" transform="rotate(-30 725 575)"/>
+  <!-- Head (smaller, child proportions) -->
+  <circle cx="680" cy="418" r="55" fill="#f8d098"/>
+  <!-- Big round child eyes -->
+  <circle cx="662" cy="415" r="10" fill="white"/>
+  <circle cx="698" cy="415" r="10" fill="white"/>
+  <circle cx="664" cy="416" r="7" fill="#3a2810"/>
+  <circle cx="700" cy="416" r="7" fill="#3a2810"/>
+  <circle cx="666" cy="414" r="2.5" fill="white"/>
+  <circle cx="702" cy="414" r="2.5" fill="white"/>
+  <!-- Child hair - tousled -->
+  <ellipse cx="680" cy="382" rx="55" ry="38" fill="#3d2b1f"/>
+  <ellipse cx="660" cy="374" rx="20" ry="15" fill="#3d2b1f" transform="rotate(-15 660 374)"/>
+  <ellipse cx="700" cy="372" rx="18" ry="14" fill="#3d2b1f" transform="rotate(10 700 372)"/>
+  <!-- Child nose and smile -->
+  <circle cx="680" cy="428" r="4" fill="#e4a878" opacity="0.6"/>
+  <path d="M667,442 Q680,455 693,442" fill="none" stroke="#c47850" stroke-width="3" stroke-linecap="round"/>
+  <!-- Child arms playing -->
+  <ellipse cx="620" cy="508" rx="18" ry="36" fill="#f8d098" transform="rotate(-25 620 508)"/>
+  <ellipse cx="740" cy="508" rx="18" ry="36" fill="#f8d098" transform="rotate(25 740 508)"/>
+
+  <!-- Colorful building blocks child is playing with -->
+  <rect x="730" y="548" width="45" height="40" rx="5" fill="#f4a261"/>
+  <rect x="768" y="528" width="40" height="60" rx="5" fill="#b8a9c9"/>
+  <rect x="800" y="542" width="42" height="46" rx="5" fill="#7fad7f"/>
+  <rect x="835" y="552" width="38" height="36" rx="5" fill="#f9c5d1"/>
+  <!-- Block shadows -->
+  <ellipse cx="758" cy="592" rx="35" ry="8" fill="rgba(0,0,0,0.06)"/>
+  <ellipse cx="840" cy="592" rx="32" ry="7" fill="rgba(0,0,0,0.06)"/>
+
+  <!-- Butterfly/art on wall - cheerful -->
+  <ellipse cx="1050" cy="200" rx="35" ry="25" fill="#f9c5d1" transform="rotate(-30 1050 200)" opacity="0.8"/>
+  <ellipse cx="1095" cy="195" rx="30" ry="20" fill="#f9c5d1" transform="rotate(20 1095 195)" opacity="0.8"/>
+  <ellipse cx="1052" cy="240" rx="25" ry="18" fill="#f4a261" transform="rotate(20 1052 240)" opacity="0.7"/>
+  <ellipse cx="1093" cy="237" rx="22" ry="15" fill="#f4a261" transform="rotate(-25 1093 237)" opacity="0.7"/>
+  <line x1="1072" y1="190" x2="1072" y2="250" stroke="#7a5535" stroke-width="3" stroke-linecap="round"/>
+  <!-- Antenna -->
+  <path d="M1072,190 Q1060,175 1055,165" fill="none" stroke="#7a5535" stroke-width="2" stroke-linecap="round"/>
+  <path d="M1072,190 Q1084,175 1089,165" fill="none" stroke="#7a5535" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="1055" cy="163" r="4" fill="#f4a261"/>
+  <circle cx="1089" cy="163" r="4" fill="#f4a261"/>
+
+  <!-- Plant -->
+  <rect x="1080" y="540" width="58" height="62" rx="6" fill="#c8a880"/>
+  <ellipse cx="1109" cy="462" rx="35" ry="60" fill="#7fad6f" transform="rotate(-18 1109 462)"/>
+  <ellipse cx="1085" cy="492" rx="28" ry="52" fill="#6f9d5f" transform="rotate(15 1085 492)"/>
+  <ellipse cx="1132" cy="497" rx="26" ry="48" fill="#8fc07f" transform="rotate(-32 1132 497)"/>
+
+  <!-- Colorful rug -->
+  <ellipse cx="620" cy="645" rx="420" ry="52" fill="#e8d4c0" opacity="0.7"/>
+  <ellipse cx="620" cy="645" rx="385" ry="43" fill="none" stroke="#d8c4b0" stroke-width="5" opacity="0.5"/>
+  <!-- Rug pattern dots -->
+  <circle cx="500" cy="645" r="8" fill="#f9c5d1" opacity="0.4"/>
+  <circle cx="560" cy="638" r="6" fill="#b8a9c9" opacity="0.4"/>
+  <circle cx="620" cy="650" r="9" fill="#f4a261" opacity="0.3"/>
+  <circle cx="680" cy="640" r="7" fill="#a8d8ea" opacity="0.4"/>
+  <circle cx="740" cy="647" r="6" fill="#7fad7f" opacity="0.4"/>
+</svg>

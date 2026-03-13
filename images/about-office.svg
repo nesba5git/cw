@@ -1,0 +1,126 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background walls -->
+  <rect width="1200" height="800" fill="#fdf8f3"/>
+  <!-- Accent wall left panel -->
+  <rect x="0" y="0" width="320" height="800" fill="#f5f0ea"/>
+  <rect y="600" width="1200" height="200" fill="#ede6dd"/>
+  <rect y="590" width="1200" height="14" fill="#e0d8cf"/>
+
+  <!-- Corner detail / wall panel trim -->
+  <line x1="320" y1="0" x2="320" y2="800" stroke="#e0d8d0" stroke-width="3"/>
+
+  <!-- Warm ambient light from lamp -->
+  <radialGradient id="lampGlow" cx="72%" cy="55%" r="40%">
+    <stop offset="0%" stop-color="rgba(246,232,177,0.3)"/>
+    <stop offset="100%" stop-color="rgba(246,232,177,0)"/>
+  </radialGradient>
+  <rect width="1200" height="800" fill="url(#lampGlow)"/>
+
+  <!-- Floor lamp -->
+  <line x1="880" y1="590" x2="880" y2="200" stroke="#9a8070" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="880" cy="594" rx="30" ry="10" fill="#8a7060"/>
+  <!-- Lamp shade -->
+  <path d="M830,200 Q880,165 930,200 L910,270 Q880,290 850,270 Z" fill="#f6e8b1"/>
+  <path d="M830,200 Q880,165 930,200" fill="none" stroke="#e8d490" stroke-width="3"/>
+  <!-- Lamp glow -->
+  <ellipse cx="880" cy="310" rx="120" ry="90" fill="rgba(255,240,180,0.18)"/>
+
+  <!-- Large framed mirror / art piece on accent wall -->
+  <rect x="60" y="140" width="200" height="280" rx="8" fill="#e8e0d8"/>
+  <rect x="60" y="140" width="200" height="280" rx="8" fill="none" stroke="#c8b8a8" stroke-width="10"/>
+  <!-- Mirror reflection interior -->
+  <rect x="72" y="152" width="176" height="256" rx="4" fill="#dde8ec"/>
+  <!-- Subtle reflection elements -->
+  <line x1="72" y1="220" x2="248" y2="220" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <ellipse cx="130" cy="300" rx="25" ry="40" fill="rgba(255,255,255,0.15)"/>
+  <!-- Mirror frame decorative corner dots -->
+  <circle cx="68" cy="148" r="5" fill="#b8a898"/>
+  <circle cx="252" cy="148" r="5" fill="#b8a898"/>
+  <circle cx="68" cy="412" r="5" fill="#b8a898"/>
+  <circle cx="252" cy="412" r="5" fill="#b8a898"/>
+
+  <!-- Narrow console table under mirror -->
+  <rect x="50" y="435" width="220" height="18" rx="4" fill="#c8b498"/>
+  <rect x="75" y="453" width="8" height="60" fill="#b8a488"/>
+  <rect x="242" y="453" width="8" height="60" fill="#b8a488"/>
+  <!-- Items on console -->
+  <!-- Small succulent -->
+  <rect x="90" y="418" width="28" height="20" rx="3" fill="#c8a880"/>
+  <circle cx="104" cy="412" r="10" fill="#7fad6f"/>
+  <circle cx="96" cy="408" r="8" fill="#6f9d5f"/>
+  <circle cx="112" cy="409" r="7" fill="#8fc07f"/>
+  <!-- Candle -->
+  <rect x="152" y="412" width="16" height="26" rx="3" fill="#f0e8d8"/>
+  <line x1="160" y1="412" x2="160" y2="405" stroke="#9a7a4a" stroke-width="2"/>
+  <ellipse cx="160" cy="404" rx="3" ry="5" fill="#f4a261" opacity="0.8"/>
+  <!-- Small frame -->
+  <rect x="200" y="405" width="42" height="32" rx="3" fill="#d8c8b0"/>
+  <rect x="204" y="409" width="34" height="24" rx="2" fill="#c8e6f4" opacity="0.6"/>
+
+  <!-- Large comfortable armchair center-right -->
+  <rect x="540" y="450" width="220" height="140" rx="20" fill="#c8a8be"/>
+  <rect x="540" y="370" width="220" height="102" rx="20" fill="#b898ae"/>
+  <rect x="520" y="405" width="40" height="175" rx="18" fill="#a888a0"/>
+  <rect x="740" y="405" width="40" height="175" rx="18" fill="#a888a0"/>
+  <rect x="560" y="578" width="16" height="32" rx="5" fill="#906880"/>
+  <rect x="720" y="578" width="16" height="32" rx="5" fill="#906880"/>
+  <!-- Chair cushion -->
+  <rect x="553" y="452" width="194" height="126" rx="14" fill="#d8b8ce"/>
+
+  <!-- Second armchair (slightly visible, angled) -->
+  <rect x="920" y="480" width="180" height="110" rx="16" fill="#f9c5d1" opacity="0.85"/>
+  <rect x="920" y="415" width="180" height="80" rx="16" fill="#f0b4c0" opacity="0.85"/>
+  <rect x="904" y="440" width="34" height="140" rx="14" fill="#e8a4b0" opacity="0.85"/>
+  <rect x="1082" y="440" width="34" height="140" rx="14" fill="#e8a4b0" opacity="0.85"/>
+
+  <!-- Round coffee table between chairs -->
+  <ellipse cx="780" cy="620" rx="130" ry="40" fill="#c8b898"/>
+  <ellipse cx="780" cy="620" rx="130" ry="40" fill="none" stroke="#b8a888" stroke-width="4"/>
+  <!-- Table items -->
+  <ellipse cx="760" cy="614" rx="22" ry="14" fill="#e8e0d8"/>
+  <rect x="795" y="606" width="40" height="12" rx="3" fill="#b8a9c9"/>
+  <rect x="797" y="595" width="36" height="11" rx="3" fill="#f9c5d1" opacity="0.8"/>
+
+  <!-- Large plant left of chair -->
+  <rect x="420" y="530" width="68" height="72" rx="8" fill="#c8a880"/>
+  <rect x="413" y="520" width="82" height="18" rx="6" fill="#b89870"/>
+  <line x1="454" y1="520" x2="454" y2="340" stroke="#7a9a6a" stroke-width="6"/>
+  <ellipse cx="454" cy="340" rx="48" ry="85" fill="#7fad6f" transform="rotate(-22 454 340)"/>
+  <ellipse cx="415" cy="388" rx="40" ry="72" fill="#6f9d5f" transform="rotate(14 415 388)"/>
+  <ellipse cx="490" cy="395" rx="36" ry="68" fill="#8fc07f" transform="rotate(-38 490 395)"/>
+  <ellipse cx="454" cy="305" rx="30" ry="58" fill="#7fad6f" transform="rotate(6 454 305)"/>
+
+  <!-- Hanging plant top right area -->
+  <line x1="1100" y1="0" x2="1100" y2="120" stroke="#9a8070" stroke-width="3" stroke-dasharray="4,4"/>
+  <circle cx="1100" cy="120" r="22" fill="#c8a880"/>
+  <!-- Trailing vines -->
+  <path d="M1100,142 Q1085,180 1070,210 Q1055,240 1065,270" fill="none" stroke="#7fad6f" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1100,142 Q1115,175 1128,205 Q1140,235 1125,262" fill="none" stroke="#6f9d5f" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="1065" cy="272" r="12" fill="#7fad6f" opacity="0.8"/>
+  <circle cx="1125" cy="265" r="10" fill="#8fc07f" opacity="0.8"/>
+  <ellipse cx="1075" cy="215" rx="18" ry="12" fill="#7fad6f" opacity="0.6" transform="rotate(-30 1075 215)"/>
+  <ellipse cx="1120" cy="220" rx="16" ry="11" fill="#6f9d5f" opacity="0.6" transform="rotate(25 1120 220)"/>
+
+  <!-- Wall text quote suggestion - subtle -->
+  <text x="400" y="180" font-family="Georgia, serif" font-size="22" fill="#c8b8a8" opacity="0.5" font-style="italic">"You don't have to be perfect to be worthy."</text>
+
+  <!-- Rug -->
+  <ellipse cx="720" cy="658" rx="380" ry="52" fill="#e8d4c0" opacity="0.72"/>
+  <ellipse cx="720" cy="658" rx="345" ry="43" fill="none" stroke="#d8c4b0" stroke-width="5" opacity="0.5"/>
+  <ellipse cx="720" cy="658" rx="300" ry="34" fill="none" stroke="#d0bca8" stroke-width="3" opacity="0.3"/>
+
+  <!-- Bowie (therapy dog) suggestion - abstract fluffy shape near chair -->
+  <ellipse cx="640" cy="590" rx="55" ry="35" fill="#8a6a50" opacity="0.85"/>
+  <circle cx="612" cy="572" r="24" fill="#8a6a50" opacity="0.85"/>
+  <!-- Fluffy texture dots -->
+  <circle cx="612" cy="560" r="8" fill="#9a7a60" opacity="0.6"/>
+  <circle cx="597" cy="572" r="7" fill="#9a7a60" opacity="0.6"/>
+  <circle cx="608" cy="584" r="8" fill="#9a7a60" opacity="0.6"/>
+  <circle cx="622" cy="568" r="6" fill="#9a7a60" opacity="0.5"/>
+  <!-- Tail -->
+  <path d="M695,580 Q720,555 715,535" fill="none" stroke="#8a6a50" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+  <!-- Dog ear -->
+  <ellipse cx="600" cy="558" rx="14" ry="22" fill="#7a5a40" transform="rotate(-20 600 558)" opacity="0.85"/>
+  <!-- Cute nose -->
+  <ellipse cx="596" cy="578" rx="7" ry="5" fill="#4a3020"/>
+</svg>

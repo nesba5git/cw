@@ -1,0 +1,125 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#fdf8f3"/>
+  <rect y="600" width="1200" height="200" fill="#ede6dd"/>
+  <rect y="590" width="1200" height="14" fill="#e0d8cf"/>
+
+  <!-- Warm gradient -->
+  <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="rgba(249,197,209,0.15)"/>
+    <stop offset="100%" stop-color="rgba(249,197,209,0)"/>
+  </radialGradient>
+  <rect width="1200" height="800" fill="url(#glow)"/>
+
+  <!-- Window -->
+  <rect x="900" y="80" width="260" height="380" rx="5" fill="#e8f4fa"/>
+  <rect x="900" y="80" width="260" height="380" rx="5" fill="none" stroke="#d8cfc6" stroke-width="9"/>
+  <line x1="1028" y1="80" x2="1028" y2="460" stroke="#e0d8d0" stroke-width="5"/>
+  <line x1="900" y1="268" x2="1160" y2="268" stroke="#e0d8d0" stroke-width="5"/>
+  <rect x="905" y="85" width="119" height="179" fill="#c8e6f4"/>
+  <rect x="1033" y="85" width="123" height="179" fill="#c8e6f4"/>
+  <!-- Curtains -->
+  <path d="M892,70 Q874,220 892,370 Q878,460 892,590" fill="none" stroke="#d8b8c4" stroke-width="26" stroke-linecap="round"/>
+  <path d="M1168,70 Q1186,220 1168,370 Q1182,460 1168,590" fill="none" stroke="#d8b8c4" stroke-width="26" stroke-linecap="round"/>
+
+  <!-- Large sofa for couple -->
+  <!-- Sofa frame -->
+  <rect x="220" y="450" width="660" height="140" rx="22" fill="#d4a8be"/>
+  <rect x="220" y="370" width="660" height="102" rx="22" fill="#c498ae"/>
+  <!-- Sofa arms -->
+  <rect x="198" y="408" width="44" height="182" rx="18" fill="#b888a0"/>
+  <rect x="858" y="408" width="44" height="182" rx="18" fill="#b888a0"/>
+  <!-- Cushions -->
+  <rect x="232" y="452" width="196" height="126" rx="14" fill="#e4b8d0"/>
+  <rect x="442" y="452" width="196" height="126" rx="14" fill="#e4b8d0"/>
+  <rect x="652" y="452" width="196" height="126" rx="14" fill="#e4b8d0"/>
+  <!-- Sofa legs -->
+  <rect x="255" y="580" width="16" height="30" rx="5" fill="#a07890"/>
+  <rect x="830" y="580" width="16" height="30" rx="5" fill="#a07890"/>
+
+  <!-- Throw blanket over sofa -->
+  <path d="M642,370 Q680,410 700,450 Q720,490 710,580" fill="none" stroke="#f6e8b1" stroke-width="22" stroke-linecap="round" opacity="0.7"/>
+  <path d="M660,370 Q700,415 718,452 Q736,490 728,580" fill="none" stroke="#f4d88a" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Person 1 (left, male presenting) -->
+  <ellipse cx="370" cy="410" rx="68" ry="95" fill="#7a8fc8"/>
+  <ellipse cx="370" cy="445" rx="60" ry="72" fill="#6a7fb8"/>
+  <!-- Head -->
+  <circle cx="370" cy="295" r="62" fill="#d4a878"/>
+  <!-- Short hair -->
+  <ellipse cx="370" cy="260" rx="62" ry="38" fill="#4a3020"/>
+  <ellipse cx="370" cy="250" rx="55" ry="28" fill="#3a2010"/>
+  <!-- Face -->
+  <ellipse cx="352" cy="294" rx="7" ry="9" fill="#3a2810" opacity="0.85"/>
+  <ellipse cx="388" cy="294" rx="7" ry="9" fill="#3a2810" opacity="0.85"/>
+  <ellipse cx="370" cy="308" rx="4" ry="3" fill="#c4885a" opacity="0.5"/>
+  <path d="M358,324 Q370,332 382,324" fill="none" stroke="#b47848" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Arm reaching toward partner -->
+  <ellipse cx="440" cy="450" rx="22" ry="44" fill="#d4a878" transform="rotate(35 440 450)"/>
+  <!-- Other arm resting -->
+  <ellipse cx="305" cy="455" rx="22" ry="40" fill="#d4a878" transform="rotate(-10 305 455)"/>
+  <!-- Hand holding -->
+  <circle cx="488" cy="480" r="18" fill="#d4a878"/>
+
+  <!-- Person 2 (right, female presenting) -->
+  <ellipse cx="730" cy="410" rx="68" ry="95" fill="#f4a261"/>
+  <ellipse cx="730" cy="445" rx="60" ry="72" fill="#e49251"/>
+  <!-- Head -->
+  <circle cx="730" cy="295" r="62" fill="#f8cfa0"/>
+  <!-- Long wavy hair -->
+  <path d="M668,278 Q678,220 730,218 Q782,220 792,278" fill="#5a3520"/>
+  <ellipse cx="730" cy="250" rx="62" ry="38" fill="#5a3520"/>
+  <rect x="668" y="248" width="20" height="100" rx="10" fill="#5a3520"/>
+  <rect x="742" y="248" width="20" height="100" rx="10" fill="#5a3520"/>
+  <!-- Face -->
+  <ellipse cx="712" cy="294" rx="7" ry="9" fill="#3a2810" opacity="0.85"/>
+  <ellipse cx="748" cy="294" rx="7" ry="9" fill="#3a2810" opacity="0.85"/>
+  <ellipse cx="730" cy="308" rx="4" ry="3" fill="#c4885a" opacity="0.5"/>
+  <path d="M718,324 Q730,334 742,326" fill="none" stroke="#b47848" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Arm reaching toward partner -->
+  <ellipse cx="660" cy="450" rx="22" ry="44" fill="#f8cfa0" transform="rotate(-35 660 450)"/>
+  <circle cx="512" cy="480" r="18" fill="#f8cfa0"/>
+  <!-- Other arm -->
+  <ellipse cx="795" cy="455" rx="22" ry="40" fill="#f8cfa0" transform="rotate(10 795 455)"/>
+
+  <!-- Joined hands between them - heart shape suggestion -->
+  <ellipse cx="550" cy="480" rx="45" ry="25" fill="rgba(249,197,209,0.3)"/>
+  <path d="M530,475 Q550,460 570,475 Q570,492 550,502 Q530,492 530,475 Z" fill="#f9c5d1" opacity="0.6"/>
+
+  <!-- Side table left -->
+  <rect x="100" y="510" width="110" height="75" rx="8" fill="#d4c0a8"/>
+  <rect x="147" y="583" width="10" height="28" fill="#c4b098"/>
+  <!-- Tea / mug on table -->
+  <rect x="124" y="488" width="36" height="28" rx="5" fill="#e8e0d8"/>
+  <path d="M160,496 Q170,501 160,508" fill="none" stroke="#c8c0b8" stroke-width="3"/>
+  <!-- Steam -->
+  <path d="M135,488 Q139,475 134,462" fill="none" stroke="#c8c0b8" stroke-width="2" opacity="0.5"/>
+  <path d="M145,488 Q149,473 144,460" fill="none" stroke="#c8c0b8" stroke-width="2" opacity="0.5"/>
+
+  <!-- Side table right -->
+  <rect x="990" y="510" width="110" height="75" rx="8" fill="#d4c0a8"/>
+  <rect x="1037" y="583" width="10" height="28" fill="#c4b098"/>
+  <!-- Flowers on table -->
+  <line x1="1050" y1="510" x2="1050" y2="468" stroke="#7a9a6a" stroke-width="3"/>
+  <circle cx="1050" cy="462" r="14" fill="#f9c5d1"/>
+  <circle cx="1038" cy="468" r="10" fill="#f4a261"/>
+  <circle cx="1062" cy="466" r="10" fill="#b8a9c9"/>
+
+  <!-- Plants -->
+  <rect x="40" y="530" width="55" height="70" rx="6" fill="#c8a880"/>
+  <ellipse cx="67" cy="455" rx="34" ry="58" fill="#7fad6f" transform="rotate(-15 67 455)"/>
+  <ellipse cx="48" cy="485" rx="28" ry="50" fill="#6f9d5f" transform="rotate(20 48 485)"/>
+  <ellipse cx="86" cy="488" rx="26" ry="46" fill="#8fc07f" transform="rotate(-35 86 488)"/>
+
+  <!-- Rug -->
+  <ellipse cx="600" cy="648" rx="440" ry="52" fill="#e8d4c0" opacity="0.7"/>
+  <ellipse cx="600" cy="648" rx="405" ry="43" fill="none" stroke="#d8c4b0" stroke-width="5" opacity="0.5"/>
+
+  <!-- Wall text / art suggestion -->
+  <rect x="500" y="110" width="200" height="150" rx="4" fill="#f0e8e0"/>
+  <rect x="500" y="110" width="200" height="150" rx="4" fill="none" stroke="#d8d0c8" stroke-width="6"/>
+  <!-- Abstract art: two interlocking circles -->
+  <circle cx="575" cy="185" r="38" fill="none" stroke="#f9c5d1" stroke-width="8" opacity="0.7"/>
+  <circle cx="625" cy="185" r="38" fill="none" stroke="#b8a9c9" stroke-width="8" opacity="0.7"/>
+  <ellipse cx="600" cy="185" rx="18" ry="38" fill="#e8d0e0" opacity="0.4"/>
+</svg>
