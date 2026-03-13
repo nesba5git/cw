@@ -1408,3 +1408,283 @@ p {
 .animate-delay-2 { animation-delay: 0.2s; }
 .animate-delay-3 { animation-delay: 0.3s; }
 .animate-delay-4 { animation-delay: 0.4s; }
+
+/* =============================================
+   HEADER RAINBOW TOP BAR
+   ============================================= */
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-rainbow);
+  z-index: 2;
+}
+
+/* =============================================
+   IMPROVED NAV ACTIVE STATE
+   ============================================= */
+.nav__link--active {
+  color: var(--color-bright-pink);
+  background: var(--color-pink-bg);
+  font-weight: 600;
+}
+
+/* =============================================
+   SECTION TAGS — IMPROVED LETTER-SPACING & CONTRAST
+   ============================================= */
+.hero__tag,
+.intro__tag,
+.services__tag,
+.approach__tag,
+.support-highlight__tag,
+.page-header__tag {
+  letter-spacing: 0.12em;
+  color: #444444; /* better contrast than #1a1a1a on yellow */
+}
+
+/* =============================================
+   MUTED TEXT — BUMP UP FROM #999 TO #666 FOR WCAG AA
+   ============================================= */
+.stat__label,
+.team-card__role,
+.footer__copy,
+.footer__legal a {
+  color: var(--color-text-light);
+}
+
+/* =============================================
+   HERO SECTION — SUBTLE DOT PATTERN
+   ============================================= */
+.hero {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff7ac2' fill-opacity='0.06' fill-rule='evenodd'%3E%3Ccircle cx='4' cy='4' r='3'/%3E%3Ccircle cx='24' cy='24' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* =============================================
+   SVG ICONS IN SERVICE / CONTACT CARDS
+   ============================================= */
+.service-card__icon svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+  color: inherit;
+}
+
+.contact-info__icon {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+.contact-info__icon svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  color: var(--color-text-light);
+}
+
+/* =============================================
+   INLINE FORM VALIDATION STATES
+   ============================================= */
+.form-group input.is-valid,
+.form-group textarea.is-valid,
+.form-group select.is-valid {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.08);
+}
+
+.form-group input.is-invalid,
+.form-group textarea.is-invalid,
+.form-group select.is-invalid {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.form-error {
+  display: none;
+  font-size: 12px;
+  color: #dc2626;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+.form-error.visible {
+  display: block;
+}
+
+.form-group.has-error label {
+  color: #dc2626;
+}
+
+/* Form loading state */
+.form-submit.is-loading {
+  opacity: 0.75;
+  pointer-events: none;
+  gap: 10px;
+}
+
+.form-submit.is-loading::after {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Form success message */
+.form-success {
+  display: none;
+  padding: 20px;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 8px;
+  margin-top: 16px;
+  text-align: center;
+  color: #15803d;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.form-success.visible {
+  display: block;
+}
+
+/* Form fallback notice */
+.form-fallback {
+  display: none;
+  padding: 16px 20px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #9a3412;
+  line-height: 1.6;
+}
+
+.form-fallback.visible {
+  display: block;
+}
+
+.form-fallback a {
+  color: var(--color-bright-pink);
+  text-decoration: underline;
+}
+
+/* Reassurance note below submit */
+.form-reassurance {
+  font-size: 13px;
+  color: var(--color-text-light);
+  margin-top: 12px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* =============================================
+   FOOTER — IMPROVED HIERARCHY
+   ============================================= */
+.footer__col h4 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer__links a {
+  font-size: 14px;
+  color: var(--color-text-light);
+}
+
+/* =============================================
+   BACK TO TOP BUTTON
+   ============================================= */
+.footer__back-top {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: var(--spacing-lg);
+}
+
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: var(--color-text-light);
+  background: none;
+  border: 1px solid var(--color-border);
+  padding: 9px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.back-to-top:hover {
+  color: var(--color-bright-pink);
+  border-color: var(--color-bright-pink);
+}
+
+.back-to-top svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* =============================================
+   SOCIAL ICON SVGs
+   ============================================= */
+.footer__social a svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+/* =============================================
+   QUOTE BLOCK — Standardize inline quotes
+   ============================================= */
+.quote-block {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quote-block__text {
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-style: italic;
+  line-height: 1.85;
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+}
+
+.quote-block__attribution {
+  font-size: 13px;
+  color: var(--color-text-light);
+}
+
+/* =============================================
+   SUPPORT HIGHLIGHT — Use pink tint for cohesion
+   ============================================= */
+.support-highlight--pink {
+  background: var(--color-pink-bg);
+  border-color: var(--color-light-pink);
+}
+
+/* =============================================
+   RESPONSIVE — Back to top on mobile
+   ============================================= */
+@media (max-width: 768px) {
+  .footer__back-top {
+    justify-content: center;
+  }
+}
