@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Mental health crisis resources, hotlines, and community support in Berks County and beyond. If you're in crisis, help is available.">
-  <title>Crisis & Community Resources | Clear Water Wellness LLC</title>
+  <title>Crisis &amp; Community Resources | Clear Water Wellness LLC</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Crisis &amp; Community Resources | Clear Water Wellness LLC">
+  <meta property="og:description" content="Mental health crisis hotlines, Berks County resources, and community support. Call 988 anytime for immediate help.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cwwellness.com/resources.html">
+  <meta property="og:image" content="https://www.cwwellness.com/images/logo.jpeg">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -141,28 +148,28 @@
           <img src="images/logo.jpeg" alt="Clear Water Wellness" class="logo__image">
         </a>
 
-        <nav class="nav">
+        <nav class="nav" aria-label="Main navigation">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="services.html" class="nav__link">Services</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link nav__link--dropdown">Get Started</a>
+              <a href="#" class="nav__link nav__link--dropdown" aria-haspopup="true">Get Started</a>
               <div class="nav__dropdown">
                 <a href="what-to-expect.html" class="nav__dropdown-link">What to Expect</a>
-                <a href="rates-insurance.html" class="nav__dropdown-link">Rates & Insurance</a>
+                <a href="rates-insurance.html" class="nav__dropdown-link">Rates &amp; Insurance</a>
                 <a href="faq.html" class="nav__dropdown-link">FAQ</a>
               </div>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link nav__link--dropdown">About</a>
+              <a href="#" class="nav__link nav__link--dropdown" aria-haspopup="true">About</a>
               <div class="nav__dropdown">
                 <a href="team.html" class="nav__dropdown-link">The Team</a>
                 <a href="support-groups.html" class="nav__dropdown-link">Support Groups</a>
               </div>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link nav__link--dropdown">Resources</a>
+              <a href="#" class="nav__link nav__link--dropdown" aria-haspopup="true">Resources</a>
               <div class="nav__dropdown">
                 <a href="blog.html" class="nav__dropdown-link">Blog</a>
                 <a href="resources.html" class="nav__dropdown-link">Crisis Resources</a>
@@ -175,7 +182,7 @@
           <a href="contact.html" class="nav__cta">Request Appointment</a>
         </nav>
 
-        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -376,8 +383,12 @@
           <div class="footer__logo">Clear Water Wellness</div>
           <p class="footer__desc">Making therapy less awkward since 2017. A warm, friendly environment with therapists committed to your healing and growth.</p>
           <div class="footer__social">
-            <a href="https://www.instagram.com/clearwaterwellness/" target="_blank" aria-label="Instagram">IG</a>
-            <a href="https://www.facebook.com/clearwaterwellnessllc" target="_blank" aria-label="Facebook">FB</a>
+            <a href="https://www.instagram.com/clearwaterwellness/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/clearwaterwellnessllc" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
           </div>
         </div>
         
@@ -412,8 +423,15 @@
         </div>
       </div>
       
+      <div class="footer__back-top">
+        <button class="back-to-top" aria-label="Scroll back to top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+          Back to top
+        </button>
+      </div>
+
       <div class="footer__bottom">
-        <p class="footer__copy">&copy; 2024 Clear Water Wellness LLC. All rights reserved.</p>
+        <p class="footer__copy">&copy; 2025 Clear Water Wellness LLC. All rights reserved.</p>
         <div class="footer__legal">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
