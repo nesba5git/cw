@@ -1,0 +1,126 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#fdf8f3"/>
+  <!-- Floor -->
+  <rect y="600" width="1200" height="200" fill="#ede6dd"/>
+  <rect y="590" width="1200" height="14" fill="#e0d8cf"/>
+
+  <!-- Warm light wash -->
+  <radialGradient id="warmLight" cx="50%" cy="30%" r="70%">
+    <stop offset="0%" stop-color="rgba(255,240,200,0.25)"/>
+    <stop offset="100%" stop-color="rgba(255,240,200,0)"/>
+  </radialGradient>
+  <rect width="1200" height="800" fill="url(#warmLight)"/>
+
+  <!-- Wall art - left -->
+  <rect x="80" y="150" width="120" height="90" rx="4" fill="#f0e8e0"/>
+  <rect x="80" y="150" width="120" height="90" rx="4" fill="none" stroke="#d8d0c8" stroke-width="6"/>
+  <circle cx="140" cy="195" r="25" fill="#f9c5d1" opacity="0.7"/>
+  <circle cx="128" cy="190" r="15" fill="#b8a9c9" opacity="0.6"/>
+
+  <!-- Wall art - right -->
+  <rect x="1000" y="120" width="100" height="130" rx="4" fill="#f0e8e0"/>
+  <rect x="1000" y="120" width="100" height="130" rx="4" fill="none" stroke="#d8d0c8" stroke-width="6"/>
+  <ellipse cx="1050" cy="185" rx="28" ry="40" fill="#a8d8ea" opacity="0.6"/>
+  <ellipse cx="1050" cy="185" rx="16" ry="25" fill="#f4a261" opacity="0.5"/>
+
+  <!-- Plant far right -->
+  <rect x="1090" y="520" width="60" height="80" rx="6" fill="#c8a880"/>
+  <rect x="1083" y="510" width="74" height="16" rx="5" fill="#b89870"/>
+  <line x1="1120" y1="510" x2="1120" y2="380" stroke="#7a9a6a" stroke-width="5"/>
+  <ellipse cx="1120" cy="380" rx="38" ry="68" fill="#7fad6f" transform="rotate(-20 1120 380)"/>
+  <ellipse cx="1090" cy="420" rx="32" ry="60" fill="#6f9d5f" transform="rotate(15 1090 420)"/>
+  <ellipse cx="1148" cy="425" rx="28" ry="55" fill="#8fc07f" transform="rotate(-35 1148 425)"/>
+
+  <!-- Small plant left -->
+  <rect x="60" y="550" width="50" height="60" rx="6" fill="#c8a880"/>
+  <rect x="54" y="542" width="62" height="14" rx="5" fill="#b89870"/>
+  <ellipse cx="85" cy="470" rx="30" ry="50" fill="#7fad6f" transform="rotate(-10 85 470)"/>
+  <ellipse cx="68" cy="495" rx="24" ry="44" fill="#6f9d5f" transform="rotate(20 68 495)"/>
+  <ellipse cx="100" cy="500" rx="22" ry="40" fill="#8fc07f" transform="rotate(-30 100 500)"/>
+
+  <!-- Chair 1 (therapist) - left facing right -->
+  <!-- Chair base/seat -->
+  <rect x="200" y="440" width="200" height="130" rx="16" fill="#b8a9c9"/>
+  <!-- Chair back -->
+  <rect x="200" y="340" width="200" height="120" rx="16" fill="#a898b8"/>
+  <!-- Chair left arm -->
+  <rect x="182" y="380" width="36" height="160" rx="14" fill="#9888a8"/>
+  <!-- Chair right arm -->
+  <rect x="382" y="380" width="36" height="160" rx="14" fill="#9888a8"/>
+  <!-- Chair legs -->
+  <rect x="225" y="560" width="16" height="40" rx="5" fill="#887898"/>
+  <rect x="359" y="560" width="16" height="40" rx="5" fill="#887898"/>
+
+  <!-- Person 1 (therapist) sitting in chair -->
+  <!-- Body -->
+  <ellipse cx="300" cy="420" rx="55" ry="80" fill="#f4a261"/>
+  <!-- Shirt/clothing detail -->
+  <ellipse cx="300" cy="450" rx="48" ry="60" fill="#e8923f"/>
+  <!-- Head -->
+  <circle cx="300" cy="310" r="58" fill="#f4c5a0"/>
+  <!-- Hair -->
+  <ellipse cx="300" cy="275" rx="58" ry="40" fill="#6b4c3b"/>
+  <!-- Face details -->
+  <ellipse cx="284" cy="308" rx="7" ry="9" fill="#4a3828" opacity="0.8"/>
+  <ellipse cx="316" cy="308" rx="7" ry="9" fill="#4a3828" opacity="0.8"/>
+  <!-- Nose -->
+  <ellipse cx="300" cy="322" rx="4" ry="3" fill="#e4a878" opacity="0.6"/>
+  <!-- Gentle smile -->
+  <path d="M288,335 Q300,345 312,335" fill="none" stroke="#c47850" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Notepad in lap -->
+  <rect x="255" y="440" width="90" height="70" rx="6" fill="#fdf8f3"/>
+  <rect x="255" y="440" width="90" height="70" rx="6" fill="none" stroke="#e0d8d0" stroke-width="2"/>
+  <line x1="265" y1="458" x2="335" y2="458" stroke="#d0c8c0" stroke-width="2"/>
+  <line x1="265" y1="470" x2="330" y2="470" stroke="#d0c8c0" stroke-width="2"/>
+  <line x1="265" y1="482" x2="320" y2="482" stroke="#d0c8c0" stroke-width="2"/>
+  <!-- Pen -->
+  <line x1="340" y1="445" x2="325" y2="500" stroke="#b8a9c9" stroke-width="3" stroke-linecap="round"/>
+  <!-- Arms holding notepad -->
+  <ellipse cx="250" cy="460" rx="20" ry="38" fill="#f4c5a0" transform="rotate(-15 250 460)"/>
+  <ellipse cx="355" cy="460" rx="20" ry="38" fill="#f4c5a0" transform="rotate(15 355 460)"/>
+
+  <!-- Chair 2 (client) - right, facing left -->
+  <rect x="800" y="440" width="200" height="130" rx="16" fill="#f9c5d1"/>
+  <rect x="800" y="340" width="200" height="120" rx="16" fill="#f0b4c0"/>
+  <rect x="782" y="380" width="36" height="160" rx="14" fill="#e8a4b0"/>
+  <rect x="982" y="380" width="36" height="160" rx="14" fill="#e8a4b0"/>
+  <rect x="825" y="560" width="16" height="40" rx="5" fill="#d89098"/>
+  <rect x="959" y="560" width="16" height="40" rx="5" fill="#d89098"/>
+
+  <!-- Person 2 (client) sitting -->
+  <!-- Body -->
+  <ellipse cx="900" cy="420" rx="55" ry="80" fill="#a8d8ea"/>
+  <ellipse cx="900" cy="450" rx="48" ry="60" fill="#98c8da"/>
+  <!-- Head -->
+  <circle cx="900" cy="310" r="58" fill="#f8d5b0"/>
+  <!-- Hair -->
+  <path d="M842,295 Q855,240 900,238 Q945,240 958,295" fill="#3d2b1f"/>
+  <ellipse cx="900" cy="268" rx="58" ry="35" fill="#3d2b1f"/>
+  <!-- Long hair sides -->
+  <rect x="842" y="260" width="18" height="80" rx="9" fill="#3d2b1f"/>
+  <rect x="940" y="260" width="18" height="80" rx="9" fill="#3d2b1f"/>
+  <!-- Face -->
+  <ellipse cx="884" cy="308" rx="7" ry="9" fill="#4a3828" opacity="0.8"/>
+  <ellipse cx="916" cy="308" rx="7" ry="9" fill="#4a3828" opacity="0.8"/>
+  <ellipse cx="900" cy="322" rx="4" ry="3" fill="#e4a878" opacity="0.6"/>
+  <!-- Thoughtful expression - slight smile -->
+  <path d="M888,335 Q900,344 912,337" fill="none" stroke="#c47850" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Arms resting -->
+  <ellipse cx="848" cy="455" rx="20" ry="38" fill="#f8d5b0" transform="rotate(10 848 455)"/>
+  <ellipse cx="952" cy="455" rx="20" ry="38" fill="#f8d5b0" transform="rotate(-10 952 455)"/>
+
+  <!-- Connection / speech element between them - subtle arc -->
+  <path d="M360,290 Q600,180 840,290" fill="none" stroke="#f9c5d1" stroke-width="3" stroke-dasharray="8,6" opacity="0.6"/>
+
+  <!-- Small floating dots suggesting conversation/connection -->
+  <circle cx="520" cy="260" r="8" fill="#b8a9c9" opacity="0.4"/>
+  <circle cx="560" cy="240" r="5" fill="#f4a261" opacity="0.4"/>
+  <circle cx="600" cy="255" r="6" fill="#f9c5d1" opacity="0.4"/>
+  <circle cx="640" cy="238" r="4" fill="#b8a9c9" opacity="0.4"/>
+  <circle cx="675" cy="252" r="7" fill="#a8d8ea" opacity="0.4"/>
+
+  <!-- Rug -->
+  <ellipse cx="600" cy="640" rx="420" ry="55" fill="#e8d4c0" opacity="0.7"/>
+  <ellipse cx="600" cy="640" rx="385" ry="46" fill="none" stroke="#d8c4b0" stroke-width="5" opacity="0.5"/>
+</svg>
